@@ -1,15 +1,11 @@
-﻿using JobHunters.Data.Migrations;
-using JobHunters.Models;
-using Microsoft.AspNet.Identity.EntityFramework;
-using System;
-using System.Collections.Generic;
-using System.Data.Entity;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace JobHunters.Data
+﻿namespace JobHunters.Data
 {
+    using System.Data.Entity;
+
+    using Microsoft.AspNet.Identity.EntityFramework;
+
+    using JobHunters.Data.Migrations;
+    using JobHunters.Models;
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
@@ -23,5 +19,11 @@ namespace JobHunters.Data
         {
             return new ApplicationDbContext();
         }
+
+        public virtual IDbSet<JobPost> JobPosts { get; set; }
+
+        public virtual IDbSet<City> Cities { get; set; }
+
+        public virtual IDbSet<Category> Categories { get; set; }
     }
 }
