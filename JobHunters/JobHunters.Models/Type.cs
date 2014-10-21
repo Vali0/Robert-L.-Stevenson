@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace JobHunters.Models
+﻿namespace JobHunters.Models
 {
-    class Type
-    {
+    public enum Type
+    {  
+        Gold,
+        Platinum,
+        Silver
     }
 }
