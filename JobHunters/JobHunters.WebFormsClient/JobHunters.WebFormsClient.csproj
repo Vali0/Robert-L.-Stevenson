@@ -377,9 +377,7 @@
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
     </Compile>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\JobHunters.Data\JobHunters.Data.csproj">
       <Project>{b8221ef1-8535-4f10-a418-7c18b43bcc47}</Project>

@@ -7,6 +7,9 @@ using Microsoft.AspNet.Identity.Owin;
 using Owin;
 using JobHunters.WebFormsClient.Models;
 using JobHunters.Models;
+using System.Web.Security;
+using Microsoft.AspNet.Identity.EntityFramework;
+using JobHunters.Data;
 
 namespace JobHunters.WebFormsClient.Account
 {
@@ -15,6 +18,15 @@ namespace JobHunters.WebFormsClient.Account
         protected void CreateUser_Click(object sender, EventArgs e)
         {
             var manager = Context.GetOwinContext().GetUserManager<ApplicationUserManager>();
+            var roleManager = new RoleManager<IdentityRole>(new RoleStore<IdentityRole>(new ApplicationDbContext()));
+
+            var admin = "Admin";
+
+            if (!roleManager.RoleExists(admin))
+            {
+                var roleResult = roleManager.Create(new IdentityRole(admin));
+            }
+
             var user = new ApplicationUser() { UserName = Email.Text, Email = Email.Text };
             IdentityResult result = manager.Create(user, Password.Text);
             if (result.Succeeded)
@@ -24,6 +36,7 @@ namespace JobHunters.WebFormsClient.Account
                 //string callbackUrl = IdentityHelper.GetUserConfirmationRedirectUrl(code, user.Id, Request);
                 //manager.SendEmail(user.Id, "Confirm your account", "Please confirm your account by clicking <a href=\"" + callbackUrl + "\">here</a>.");
 
+                var adminResult = manager.AddToRole(user.Id, admin);
                 IdentityHelper.SignIn(manager, user, isPersistent: false);
                 IdentityHelper.RedirectToReturnUrl(Request.QueryString["ReturnUrl"], Response);
             }
