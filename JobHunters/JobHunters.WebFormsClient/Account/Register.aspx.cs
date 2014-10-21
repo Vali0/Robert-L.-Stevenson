@@ -15,17 +15,26 @@ namespace JobHunters.WebFormsClient.Account
 {
     public partial class Register : Page
     {
+        private const string Admin = "Admin";
+        private const string Employer = "Employer";
         protected void CreateUser_Click(object sender, EventArgs e)
         {
             var manager = Context.GetOwinContext().GetUserManager<ApplicationUserManager>();
             var roleManager = new RoleManager<IdentityRole>(new RoleStore<IdentityRole>(new ApplicationDbContext()));
 
-            var admin = "Admin";
 
-            if (!roleManager.RoleExists(admin))
+
+            if (!roleManager.RoleExists(Admin))
             {
-                var roleResult = roleManager.Create(new IdentityRole(admin));
+                var roleResult = roleManager.Create(new IdentityRole(Admin));
             }
+
+            if (!roleManager.RoleExists(Employer))
+            {
+                var roleResult = roleManager.Create(new IdentityRole(Employer));
+            }
+
+
 
             var user = new ApplicationUser() { UserName = Email.Text, Email = Email.Text };
             IdentityResult result = manager.Create(user, Password.Text);
@@ -36,7 +45,12 @@ namespace JobHunters.WebFormsClient.Account
                 //string callbackUrl = IdentityHelper.GetUserConfirmationRedirectUrl(code, user.Id, Request);
                 //manager.SendEmail(user.Id, "Confirm your account", "Please confirm your account by clicking <a href=\"" + callbackUrl + "\">here</a>.");
 
-                var adminResult = manager.AddToRole(user.Id, admin);
+                if (isEmployer.Checked)
+                {
+                    var employerResult = manager.AddToRole(user.Id, Employer);
+                }
+
+                //var adminResult = manager.AddToRole(user.Id, admin);
                 IdentityHelper.SignIn(manager, user, isPersistent: false);
                 IdentityHelper.RedirectToReturnUrl(Request.QueryString["ReturnUrl"], Response);
             }

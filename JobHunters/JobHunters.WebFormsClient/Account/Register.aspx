@@ -37,6 +37,12 @@
             </div>
         </div>
         <div class="form-group">
+            <asp:Label runat="server" AssociatedControlID="IsEmployer" CssClass="col-md-2 control-label">Employer?</asp:Label>
+            <div class="col-md-10">
+                <asp:CheckBox runat="server" ID="isEmployer" />
+            </div>
+        </div>
+        <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
                 <asp:Button runat="server" OnClick="CreateUser_Click" Text="Register" CssClass="btn btn-default" />
             </div>

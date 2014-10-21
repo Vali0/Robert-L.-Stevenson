@@ -24,5 +24,7 @@ namespace JobHunters.Models
         {
             return Task.FromResult(GenerateUserIdentity(manager));
         }
+
+
     }
 }
