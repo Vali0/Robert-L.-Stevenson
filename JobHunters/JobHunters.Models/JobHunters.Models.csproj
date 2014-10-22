@@ -83,7 +83,7 @@
     <Compile Include="HierarchyLevel.cs" />
     <Compile Include="JobPost.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Type.cs" />
+    <Compile Include="OfferType.cs" />
     <Compile Include="WorkEmployment.cs" />
   </ItemGroup>
   <ItemGroup>

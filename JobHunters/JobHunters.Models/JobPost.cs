@@ -36,7 +36,7 @@
         public virtual Category Category { get; set; }
 
         [Required]
-        public Type Type { get; set; }
+        public OfferType OfferType { get; set; }
 
         [Required]
         public HierarchyLevel HierarchyLevel { get; set; }

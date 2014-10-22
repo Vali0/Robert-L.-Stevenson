@@ -29,20 +29,17 @@
 
         public void Add(T entity)
         {
-            var entry = AttachIfDetached(entity);
-            entry.State = EntityState.Added;
+            this.ChangeState(entity, EntityState.Added);
         }
 
         public void Update(T entity)
         {
-            var entry = AttachIfDetached(entity);
-            entry.State = EntityState.Modified;
+            this.ChangeState(entity, EntityState.Modified);
         }
 
         public void Delete(T entity)
         {
-            var entry = AttachIfDetached(entity);
-            entry.State = EntityState.Deleted;
+            this.ChangeState(entity, EntityState.Deleted);
         }
 
         public void Detach(T entity)
@@ -56,7 +53,7 @@
             return this.All().First();
         }
 
-        private DbEntityEntry AttachIfDetached(T entity)
+        private void ChangeState(T entity, EntityState state)
         {
             var entry = this.context.Entry(entity);
             if (entry.State == EntityState.Detached)
@@ -64,7 +61,7 @@
                 this.set.Attach(entity);
             }
 
-            return entry;
+            entry.State = state;
         }
     }
 }
