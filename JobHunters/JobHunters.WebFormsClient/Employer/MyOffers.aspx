@@ -6,23 +6,27 @@
     <asp:ListView ID="ListViewMyOffers" runat="server"
         SelectMethod="ListViewMyOffers_Select"
         UpdateMethod="Update"
+        DeleteMethod="Delete"
         ItemType="JobHunters.Models.JobPost"
         InsertItemPosition="None"
         DataKeyNames="Id"
+        OnSorting="ListViewMyOffers_Sorting"
         AutoGenerateEditButton="true"
-        AutoGenerateColumns="false">
+        AutoGenerateColumns="false"
+        >
 
         <LayoutTemplate>
             <table class="table table-bordered table-hover table-responsive table-striped">
                 <thead>
                     <tr>
-                        <th>Title</th>
-                        <th>Description</th>
-                        <th>City</th>
-                        <th>Category</th>
-                        <th>Offer Type</th>
-                        <th>Hierarchy Level</th>
-                        <th>Employment</th>
+                        <th><asp:LinkButton runat="server" CommandName="sort" CommandArgument="Title">Title</asp:LinkButton></th>
+                        <th><asp:LinkButton runat="server" CommandName="sort" CommandArgument="Description">Description</asp:LinkButton></th>
+                        <th><asp:LinkButton runat="server" CommandName="sort" CommandArgument="City.Name">City</asp:LinkButton></th>
+                        <th><asp:LinkButton runat="server" CommandName="sort" CommandArgument="Category.Name">Category</asp:LinkButton></th>
+                        <th><asp:LinkButton runat="server" CommandName="sort" CommandArgument="OfferType">Offer Type</asp:LinkButton></th>
+                        <th><asp:LinkButton runat="server" CommandName="sort" CommandArgument="HierarchyLevel">Hierarchy Level</asp:LinkButton></th>
+                        <th><asp:LinkButton runat="server" CommandName="sort" CommandArgument="WorkEmployement">Employment</asp:LinkButton></th>
+                        <th><asp:LinkButton runat="server" CommandName="sort" CommandArgument="CreatedOn">Date Created</asp:LinkButton></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -45,19 +49,20 @@
         </LayoutTemplate>
 
         <EmptyDataTemplate>
-            <div>No data was returned.</div>
+            <div class="label label-warning big-text">No Items To Show.</div>
         </EmptyDataTemplate>
 
         <ItemTemplate>
             <tr class="item">
-                <td class="text-primary"><%#: Item.Title %></td>
-                <td><%#: Item.Description %></td>
+                <td class="text-primary"><a href="/OfferDetails.aspx/<%#: Item.Id %>"><%#: Item.Title %></a></td>
+                <td><%#: Item.Description.Substring(0,Item.Description.Length>10?10:Item.Description.Length)+"..." %></td>
 
                 <td class="text-info"><%#: Item.City.Name %></td> 
                 <td><%#: Item.Category.Name %></td>
                 <td><%#: Enum.GetName(typeof(OfferType),Item.OfferType) %></td>
                 <td><%#: Enum.GetName(typeof(HierarchyLevel),Item.HierarchyLevel) %></td>
                 <td><%#: Enum.GetName(typeof(WorkEmployment),Item.WorkEmployement) %></td>
+                <td><%#: Item.CreatedOn %></td>
                 <td> <asp:Button ID="ButtonEdit" runat="server" CommandName="Edit" Text="Edit" CssClass="btn btn-sm btn-primary"/></td>
                 <td>  <asp:Button ID="ButtonDelete" runat="server" CommandName="Delete" Text="Delete" CssClass="btn btn-sm btn-primary"/></td>
                

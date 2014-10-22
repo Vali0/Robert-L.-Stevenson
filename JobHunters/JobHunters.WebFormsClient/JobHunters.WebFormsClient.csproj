@@ -169,6 +169,7 @@
     <Content Include="Employer\CreateOffer.aspx" />
     <Content Include="Employer\MyOffers.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="OfferDetails.aspx" />
     <Content Include="packages.config" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
@@ -375,7 +376,15 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="LinqExtensions.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="OfferDetails.aspx.cs">
+      <DependentUpon>OfferDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OfferDetails.aspx.designer.cs">
+      <DependentUpon>OfferDetails.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
