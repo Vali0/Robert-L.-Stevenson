@@ -2,7 +2,7 @@
 {
     public enum HierarchyLevel
     {
-        Specialist,
+        Specialist = 1,
         Expert,
         Supervisor,
         Intern,

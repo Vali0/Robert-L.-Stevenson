@@ -2,8 +2,8 @@
 {
     public enum WorkEmployment
     {
-        FullTime,
-        PartTime,
-        HalfDay
+        FullTime=1,
+        PartTime=2,
+        HalfDay=3
     }
 }
