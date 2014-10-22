@@ -3,11 +3,12 @@
     using System;
     using System.Collections.Generic;
     using System.Data.Entity;
+    using System.Data.Entity.Validation;
 
     using JobHunters.Data.Repositories;
     using JobHunters.Data.UnitOfWork;
     using JobHunters.Models;
-   
+
     public class ApplicationData : IJobHuntersData
     {
         private DbContext context;
@@ -53,7 +54,9 @@
 
         public void SaveChanges()
         {
+
             this.context.SaveChanges();
+
         }
 
         private IGenericRepository<T> GetRepository<T>() where T : class
