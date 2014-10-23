@@ -44,5 +44,7 @@
         [Required]
         public WorkEmployment WorkEmployement { get; set; }
 
+        public string ProfileImage { get; set; }
+
     }
 }
