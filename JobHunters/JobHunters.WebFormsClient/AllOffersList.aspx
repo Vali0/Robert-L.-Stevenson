@@ -2,7 +2,6 @@
 
 <%@ Import Namespace="JobHunters.Models" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <div class="alert alert-danger" runat="server" id="errContainer" visible="False"></div>
     <asp:ListView ID="ListViewAllOffers" runat="server"
         SelectMethod="ListViewAllOffers_Select"
         UpdateMethod="Update"
@@ -45,19 +44,14 @@
             <div class="pagerLine">
                 <ul class="pagination">
                     <asp:DataPager ID="DataPagerCustomers" runat="server" PageSize="10">
-
                         <Fields>
-
                             <asp:NextPreviousPagerField ShowFirstPageButton="True"
                                 ShowNextPageButton="False" ShowPreviousPageButton="False" />
                             <asp:NumericPagerField />
 
                             <asp:NextPreviousPagerField ShowLastPageButton="True"
                                 ShowNextPageButton="False" ShowPreviousPageButton="False" />
-
                         </Fields>
-
-
                     </asp:DataPager>
                 </ul>
             </div>
@@ -84,9 +78,6 @@
 
         <EditItemTemplate>
             <div class="editItem form-horizontal">
-
-
-
                 <asp:ValidationSummary runat="server" CssClass="text-danger" />
                 <div class="form-group">
                     <asp:Label runat="server" AssociatedControlID="JobTitle" CssClass="col-md-2 control-label">Title</asp:Label>

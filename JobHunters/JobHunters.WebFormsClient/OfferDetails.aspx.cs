@@ -26,7 +26,7 @@ namespace JobHunters.WebFormsClient
         {
             if (!HttpContext.Current.User.Identity.IsAuthenticated)
             {
-                Response.Redirect("Account/Login.aspx");
+                Response.Redirect("/Account/Login.aspx");
             }
             var urlParams = ((List<string>)RouteData.DataTokens["FriendlyUrlSegments"]);
             if (urlParams.Any())
