@@ -25,6 +25,11 @@
         </div>
     </div>
     <div class="row text-center">
+        <asp:Button ID="ButtonDetailedSearch" runat="server" 
+            CssClass="btn btn-lg btn-success" Text="Detailed Search" OnClick="ButtonDetailedSearch_Click" />
+    </div>
+    <br />
+    <div class="row text-center">
         <div class="panel panel-primary">
             <div class="panel-heading">
                 <h2>Latest Job Offers:</h2>

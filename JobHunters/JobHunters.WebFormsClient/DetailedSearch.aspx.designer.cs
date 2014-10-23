@@ -13,12 +13,57 @@ namespace JobHunters.WebFormsClient {
     public partial class DetailedSearch {
         
         /// <summary>
-        /// mainForm control.
+        /// DropDownListCities control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm mainForm;
+        protected global::System.Web.UI.WebControls.DropDownList DropDownListCities;
+        
+        /// <summary>
+        /// DropDownListCategories control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList DropDownListCategories;
+        
+        /// <summary>
+        /// CheckBoxListLevels control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBoxList CheckBoxListLevels;
+        
+        /// <summary>
+        /// RadioButtonListEployements control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButtonList RadioButtonListEployements;
+        
+        /// <summary>
+        /// TextBoxKeyWords control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextBoxKeyWords;
+        
+        /// <summary>
+        /// ButtonSearch control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button ButtonSearch;
     }
 }

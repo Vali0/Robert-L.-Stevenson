@@ -45,11 +45,14 @@ build/
 *.pidb
 *.log
 *.scc
+<<<<<<< HEAD
 *.jpg
 *.png
 *.jpeg
 *.gif
 Web.config
+=======
+>>>>>>> f2f0f37476aab883166ac34db68e8f7f573401da
 
 # Visual C++ cache files
 ipch/

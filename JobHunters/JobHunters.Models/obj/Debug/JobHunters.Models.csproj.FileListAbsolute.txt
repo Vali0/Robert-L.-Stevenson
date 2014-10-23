@@ -84,3 +84,4 @@ C:\Users\Valentin\Desktop\Robert TW\Robert-L.-Stevenson\JobHunters\JobHunters.Mo
 C:\Users\Valentin\Desktop\Robert TW\Robert-L.-Stevenson\JobHunters\JobHunters.Models\obj\Debug\JobHunters.Models.csprojResolveAssemblyReference.cache
 C:\Users\Valentin\Desktop\Robert TW\Robert-L.-Stevenson\JobHunters\JobHunters.Models\obj\Debug\JobHunters.Models.dll
 C:\Users\Valentin\Desktop\Robert TW\Robert-L.-Stevenson\JobHunters\JobHunters.Models\obj\Debug\JobHunters.Models.pdb
+D:\TELERIK\Teamworks\Robert-L.-Stevenson\JobHunters\JobHunters.Models\obj\Debug\JobHunters.Models.csprojResolveAssemblyReference.cache

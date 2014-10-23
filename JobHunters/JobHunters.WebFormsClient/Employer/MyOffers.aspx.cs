@@ -3,7 +3,6 @@
     using System;
     using System.Collections;
     using System.Data.Entity;
-    using System.Data.SqlClient;
     using System.Linq;
     using System.Web;
     using System.Web.ModelBinding;
@@ -19,6 +18,32 @@
     {
         private static IJobHuntersData data;
 
+        public SortDirection sortDirection
+        {
+            get
+            {
+                if (this.ViewState["sortdirection"] == null)
+                {
+                    this.ViewState["sortdirection"] = SortDirection.Ascending;
+                    return SortDirection.Ascending;
+                }
+                else if ((SortDirection)this.ViewState["sortdirection"] == SortDirection.Ascending)
+                {
+                    this.ViewState["sortdirection"] = SortDirection.Descending;
+                    return SortDirection.Descending;
+                }
+                else
+                {
+                    this.ViewState["sortdirection"] = SortDirection.Ascending;
+                    return SortDirection.Ascending;
+                }
+            }
+            set
+            {
+                this.ViewState["sortdirection"] = value;
+            }
+        }
+
         protected void Page_PreInit(object sender, EventArgs e)
         {
             data = new ApplicationData(new ApplicationDbContext());
@@ -26,42 +51,15 @@
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
         }
 
-        public SortDirection sortDirection
-        {
-            get
-            {
-                if (ViewState["sortdirection"] == null)
-                {
-                    ViewState["sortdirection"] = SortDirection.Ascending;
-                    return SortDirection.Ascending;
-                }
-                else if ((SortDirection)ViewState["sortdirection"] == SortDirection.Ascending)
-                {
-                    ViewState["sortdirection"] = SortDirection.Descending;
-                    return SortDirection.Descending;
-                }
-                else
-                {
-                    ViewState["sortdirection"] = SortDirection.Ascending;
-                    return SortDirection.Ascending;
-                }
-            }
-            set
-            {
-                ViewState["sortdirection"] = value;
-            }
-        }
-
-        public IQueryable<JobPost> ListViewMyOffers_Select([ViewState("OrderBy")]String OrderBy = null)
+        public IQueryable<JobPost> ListViewMyOffers_Select([ViewState("OrderBy")] String OrderBy = null)
         {
             var currentUserId = HttpContext.Current.User.Identity.GetUserId();
             var items = data.JobPosts.All().Where(j => j.AuthorId == currentUserId).Include("City").Include("Category");
             if (OrderBy != null)
             {
-                switch (sortDirection)
+                switch (this.sortDirection)
                 {
                     case SortDirection.Ascending:
                         items = items.OrderByDescending(OrderBy);
@@ -73,11 +71,10 @@
                         items = items.OrderByDescending(OrderBy);
                         break;
                 }
-                ViewState["SortOrder"] = null;
+                this.ViewState["SortOrder"] = null;
             }
             return items;
         }
-
 
         public IEnumerable Select_Cities()
         {
@@ -92,23 +89,17 @@
 
         public IEnumerable Select_Type()
         {
-            return Enum.GetNames(typeof(OfferType))
-                        .Select(x => new { Text = x, Value = x })
-                        .ToList();
+            return Enum.GetNames(typeof(OfferType)).Select(x => new { Text = x, Value = x }).ToList();
         }
 
         public IEnumerable Select_Hierarchy()
         {
-            return Enum.GetNames(typeof(HierarchyLevel))
-                .Select(x => new { Text = x, Value = x })
-                .ToList();
+            return Enum.GetNames(typeof(HierarchyLevel)).Select(x => new { Text = x, Value = x }).ToList();
         }
 
         public IEnumerable Select_Employmemnt()
         {
-            return Enum.GetNames(typeof(WorkEmployment))
-                       .Select(x => new { Text = x, Value = x })
-                       .ToList();
+            return Enum.GetNames(typeof(WorkEmployment)).Select(x => new { Text = x, Value = x }).ToList();
         }
 
         public void Update(int Id)
@@ -117,12 +108,11 @@
             JobPost item = data.JobPosts.All().FirstOrDefault(x => x.Id == Id);
             if (item == null)
             {
-                ModelState.AddModelError("",
-                    String.Format("Product with id {0} was not found", Id));
+                this.ModelState.AddModelError("", String.Format("Product with id {0} was not found", Id));
                 return;
             }
-            TryUpdateModel(item);
-            if (ModelState.IsValid)
+            this.TryUpdateModel(item);
+            if (this.ModelState.IsValid)
             {
                 data.JobPosts.Update(item);
                 data.SaveChanges();
@@ -131,27 +121,30 @@
 
         protected void ListViewMyOffers_Sorting(object sender, ListViewSortEventArgs e)
         {
-
-
             e.Cancel = true;
-            ViewState["OrderBy"] = e.SortExpression;
-            ListViewMyOffers.DataBind();
-
+            this.ViewState["OrderBy"] = e.SortExpression;
+            this.ListViewMyOffers.DataBind();
         }
 
         public void Delete(int Id)
         {
-            data=new ApplicationData(new ApplicationDbContext());
+            data = new ApplicationData(new ApplicationDbContext());
             var item = data.JobPosts.All().FirstOrDefault(x => x.Id == Id);
             if (item == null)
             {
-                ModelState.AddModelError("",
-                    String.Format("Product with id {0} was not found", Id));
+                this.ModelState.AddModelError("", String.Format("Product with id {0} was not found", Id));
                 return;
             }
-
-                data.JobPosts.Delete(item);
-                data.SaveChanges();
+            item.Viewers.Clear();
+            item.Applicants.Clear();
+            data.JobPosts.Update(item);
+            if (item.Author==null)
+            {
+                
+            }
+            data.SaveChanges();
+            data.JobPosts.Delete(item);
+            data.SaveChanges();
         }
     }
 }

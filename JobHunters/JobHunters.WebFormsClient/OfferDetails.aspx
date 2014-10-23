@@ -15,32 +15,43 @@
                     <h3 class="text-info"><%#: Item.Title %></h3>
                 </div>
                 <div class="panel-body">
-                    <strong>Description: </strong>
-                    <%#: Item.Description %>
-                    <br />
-                    <strong>Posted on: </strong>
+                    <div class="well">
+                         <strong class="block big-text text-center">Description</strong>
+                    <p class="text-center lead"><%#: Item.Description %></p>
+                    </div>
+                   <div class="well">
+                       <strong>Posted on: </strong>
                     <%#: Item.CreatedOn %>
-                    <br />
-                    <strong>Employer: </strong>
+                   </div>
+                    <div class="well">
+                        <strong>Employer: </strong>
                     <%#: Item.Author.UserName %>
-                    <br />
-                    <strong>City: </strong>
+                    </div>
+                    <div class="well">
+                        <strong>City: </strong>
                     <%#: Item.City.Name %>
-                    <br />
-                    <strong>Category: </strong>
+                    </div>
+                    <div class="well">
+                        <strong>Category: </strong>
                     <%#: Item.Category.Name %>
-                    <br />
-                    <strong>Type: </strong>
+                    </div>
+                    <div class="well">
+                         <strong>Type: </strong>
                     <%#: Item.OfferType %>
-                    <br />
-                    <strong>Level: </strong>
+                    </div>
+                   <div class="well">
+                       <strong>Level: </strong>
                     <%#: Item.HierarchyLevel %>
-                    <br />
-                    <strong>Employement: </strong>
+                   </div>
+                    <div class="well">
+                        <strong>Employement: </strong>
                 <%#: Item.WorkEmployement %>
+                    </div>
+                    
                 </div>
             </div>
-            <asp:Button runat="server" ID="applyBtn" Text="Apply now!" CssClass="btn btn-lg btn-success"/>
+            
         </ItemTemplate>
     </asp:FormView>
+    <asp:Button runat="server" ID="applyBtn" Text="Apply now!" CssClass="btn btn-lg btn-success btn-block" Visible="False"/>
 </asp:Content>
