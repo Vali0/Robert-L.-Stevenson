@@ -3,15 +3,14 @@
 <%@ Import Namespace="JobHunters.Models" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div class="alert alert-danger" runat="server" id="errContainer" visible="False"></div>
-    <asp:ListView ID="ListViewMyOffers" runat="server"
-        SelectMethod="ListViewMyOffers_Select"
+    <asp:ListView ID="ListViewAllOffers" runat="server"
+        SelectMethod="ListViewAllOffers_Select"
         UpdateMethod="Update"
         DeleteMethod="Delete"
         ItemType="JobHunters.Models.JobPost"
         InsertItemPosition="None"
         DataKeyNames="Id"
-        OnSorting="ListViewMyOffers_Sorting"
-        AutoGenerateEditButton="true"
+        OnSorting="ListViewAllOffers_Sorting"
         AutoGenerateColumns="false">
 
         <LayoutTemplate>
@@ -80,12 +79,6 @@
                 <td><%#: Enum.GetName(typeof(WorkEmployment),Item.WorkEmployement) %></td>
                 <td><%#: Item.CreatedOn %></td>
                 <td><%#: Item.Views %></td>
-                <td>
-                    <asp:Button ID="ButtonEdit" runat="server" CommandName="Edit" Text="Edit" CssClass="btn btn-sm btn-primary" /></td>
-                <td>
-                    <asp:Button ID="ButtonDelete" runat="server" CommandName="Delete" Text="Delete" CssClass="btn btn-sm btn-primary" /></td>
-
-
             </tr>
         </ItemTemplate>
 
@@ -161,20 +154,6 @@
                             SelectMethod="Select_Employmemnt"
                             SelectedValue="<%# BindItem.WorkEmployement  %>" AppendDataBoundItems="True" />
                     </div>
-                </div>
-                <div class="form-group">
-                    <div class="col-md-1 pull-right">
-                        <asp:Button ID="UpdateButton" runat="server" CssClass="btn btn-success"
-                            CommandName="Update" Text="Update" />
-                    </div>
-
-                </div>
-                <div class="form-group">
-                    <div class="col-md-1 pull-right">
-                        <asp:Button ID="CancelButton" runat="server" CssClass="btn btn-primary"
-                            CommandName="Cancel" Text="Cancel" />
-                    </div>
-
                 </div>
             </div>
         </EditItemTemplate>

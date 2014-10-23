@@ -174,10 +174,7 @@
                         <asp:Button ID="CancelButton" runat="server" CssClass="btn btn-primary"
                             CommandName="Cancel" Text="Cancel" />
                     </div>
-
                 </div>
-
-
             </div>
         </EditItemTemplate>
     </asp:ListView>

@@ -22,12 +22,12 @@ namespace JobHunters.WebFormsClient {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl errContainer;
         
         /// <summary>
-        /// ListViewMyOffers control.
+        /// ListViewAllOffers control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ListView ListViewMyOffers;
+        protected global::System.Web.UI.WebControls.ListView ListViewAllOffers;
     }
 }

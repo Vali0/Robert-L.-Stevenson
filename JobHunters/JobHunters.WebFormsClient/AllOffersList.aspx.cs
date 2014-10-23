@@ -55,7 +55,7 @@ namespace JobHunters.WebFormsClient
             }
         }
 
-        public IQueryable<JobPost> ListViewMyOffers_Select([ViewState("OrderBy")]String OrderBy = null)
+        public IQueryable<JobPost> ListViewAllOffers_Select([ViewState("OrderBy")]String OrderBy = null)
         {
             var currentUserId = HttpContext.Current.User.Identity.GetUserId();
             var items = data.JobPosts.All().Include("City").Include("Category");
@@ -121,7 +121,9 @@ namespace JobHunters.WebFormsClient
                     String.Format("Product with id {0} was not found", Id));
                 return;
             }
+
             TryUpdateModel(item);
+
             if (ModelState.IsValid)
             {
                 data.JobPosts.Update(item);
@@ -129,29 +131,11 @@ namespace JobHunters.WebFormsClient
             }
         }
 
-        protected void ListViewMyOffers_Sorting(object sender, ListViewSortEventArgs e)
+        protected void ListViewAllOffers_Sorting(object sender, ListViewSortEventArgs e)
         {
-
-
             e.Cancel = true;
             ViewState["OrderBy"] = e.SortExpression;
-            ListViewMyOffers.DataBind();
-
-        }
-
-        public void Delete(int Id)
-        {
-            data = new ApplicationData(new ApplicationDbContext());
-            var item = data.JobPosts.All().FirstOrDefault(x => x.Id == Id);
-            if (item == null)
-            {
-                ModelState.AddModelError("",
-                    String.Format("Product with id {0} was not found", Id));
-                return;
-            }
-
-            data.JobPosts.Delete(item);
-            data.SaveChanges();
+            ListViewAllOffers.DataBind();
         }
     }
 }
