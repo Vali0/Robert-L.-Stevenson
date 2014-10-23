@@ -37,5 +37,10 @@ namespace JobHunters.WebFormsClient
             var items = data.JobPosts.All().Include("City").Include("Category").OrderByDescending(x => x.CreatedOn);
             return items;
         }
+
+        protected void ButtonDetailedSearch_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("DetailedSearch.aspx");
+        }
     }
 }

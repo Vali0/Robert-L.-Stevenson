@@ -42,7 +42,5 @@
             </div>
             <asp:Button runat="server" ID="applyBtn" Text="Apply now!" CssClass="btn btn-lg btn-success"/>
         </ItemTemplate>
-
     </asp:FormView>
-
 </asp:Content>

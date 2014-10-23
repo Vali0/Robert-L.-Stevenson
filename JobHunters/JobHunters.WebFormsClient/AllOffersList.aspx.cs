@@ -11,8 +11,6 @@
     using JobHunters.Data.UnitOfWork;
     using JobHunters.Models;
 
-    using Microsoft.AspNet.Identity;
-
 namespace JobHunters.WebFormsClient
 {
     public partial class AllOffersList : System.Web.UI.Page
