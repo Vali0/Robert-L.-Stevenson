@@ -24,6 +24,7 @@
             </asp:Label>
         </div>
     </div>
+    
     <div class="row text-center">
         <asp:Button ID="ButtonDetailedSearch" runat="server" 
             CssClass="btn btn-lg btn-success" Text="Detailed Search" OnClick="ButtonDetailedSearch_Click" />

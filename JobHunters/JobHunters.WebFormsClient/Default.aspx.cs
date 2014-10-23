@@ -34,7 +34,7 @@ namespace JobHunters.WebFormsClient
         public IEnumerable<JobPost> ListViewMyOffers_Select()
         {
             data = new ApplicationData(new ApplicationDbContext());
-            var items = data.JobPosts.All().Include("City").Include("Category").OrderByDescending(x => x.CreatedOn);
+            var items = data.JobPosts.All().Include("City").Include("Category").OrderByDescending(x => x.CreatedOn).Take(10);
             return items;
         }
 
