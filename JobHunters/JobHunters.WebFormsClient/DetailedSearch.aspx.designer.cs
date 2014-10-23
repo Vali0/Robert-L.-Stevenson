@@ -7,13 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace JobHunters.WebFormsClient
-{
-
-
-    public partial class DetailedSearch
-    {
-
+namespace JobHunters.WebFormsClient {
+    
+    
+    public partial class DetailedSearch {
+        
         /// <summary>
         /// DropDownListCities control.
         /// </summary>
@@ -22,7 +20,7 @@ namespace JobHunters.WebFormsClient
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList DropDownListCities;
-
+        
         /// <summary>
         /// DropDownListCategories control.
         /// </summary>
@@ -31,7 +29,7 @@ namespace JobHunters.WebFormsClient
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList DropDownListCategories;
-
+        
         /// <summary>
         /// CheckBoxListLevels control.
         /// </summary>
@@ -40,7 +38,7 @@ namespace JobHunters.WebFormsClient
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.CheckBoxList CheckBoxListLevels;
-
+        
         /// <summary>
         /// RadioButtonListEployements control.
         /// </summary>
@@ -49,7 +47,7 @@ namespace JobHunters.WebFormsClient
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RadioButtonList RadioButtonListEployements;
-
+        
         /// <summary>
         /// TextBoxKeyWords control.
         /// </summary>
@@ -58,7 +56,7 @@ namespace JobHunters.WebFormsClient
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TextBoxKeyWords;
-
+        
         /// <summary>
         /// ButtonSearch control.
         /// </summary>
@@ -67,7 +65,7 @@ namespace JobHunters.WebFormsClient
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button ButtonSearch;
-
+        
         /// <summary>
         /// GridViewFilteredOffers control.
         /// </summary>

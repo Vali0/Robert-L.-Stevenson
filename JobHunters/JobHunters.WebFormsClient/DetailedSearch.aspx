@@ -62,7 +62,7 @@ Inherits="JobHunters.WebFormsClient.DetailedSearch" MasterPageFile="~/Site.Maste
     </div>
     <br />
     <asp:GridView ID="GridViewFilteredOffers" runat="server" CssClass="table table-bordered"
-        AllowPaging="true" AutoGenerateColumns="false" ItemType="JobHunters.Models.JobPost" DataKeyNames="Id"
+        AllowPaging="true" PageSize="10" AutoGenerateColumns="false" ItemType="JobHunters.Models.JobPost" DataKeyNames="Id"
         OnPageIndexChanging="GridViewFilteredOffers_PageIndexChanging">
         <Columns>
             <asp:HyperLinkField DataTextField="Title" DataNavigateUrlFields="Id" HeaderText="Title"
@@ -75,8 +75,5 @@ Inherits="JobHunters.WebFormsClient.DetailedSearch" MasterPageFile="~/Site.Maste
             <asp:BoundField DataField="CreatedOn" HeaderText="Date Created" />
             <asp:BoundField DataField="Views" HeaderText="Views" />
         </Columns>
-        
     </asp:GridView>
-   
-
 </asp:Content>
