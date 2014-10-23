@@ -1,9 +1,10 @@
 ﻿namespace JobHunters.Models
 {
+    using System;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
 
-    public class City
+    public class City:IComparable<City>,IComparable
     {
         private ICollection<JobPost> jobPosts;
 
@@ -27,6 +28,17 @@
             {
                 this.jobPosts = value;
             }
+        }
+
+        public int CompareTo(City other)
+        {
+            return this.Name.CompareTo(other.Name);
+        }
+
+        public int CompareTo(object obj)
+        {
+            var other = obj as City;
+            return this.Name.CompareTo(other.Name);
         }
     }
 }
