@@ -103,8 +103,8 @@ namespace JobHunters.WebFormsClient
 
         private List<JobPost> GetAllOffers()
         {
-            var city = this.DropDownListCities.SelectedItem.Value;
-            var category = this.DropDownListCategories.SelectedItem.Value;
+            var city = this.DropDownListCities.SelectedItem.Text;
+            var category = this.DropDownListCategories.SelectedItem.Text;
             List<int> levels = new List<int>();
 
             foreach (ListItem item in this.CheckBoxListLevels.Items)
