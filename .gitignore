@@ -49,7 +49,7 @@ build/
 *.png
 *.jpeg
 *.gif
-Web.config
+[Ww]eb.config
 
 # Visual C++ cache files
 ipch/
