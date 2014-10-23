@@ -7,13 +7,13 @@
 
     public class JobPost
     {
-        private ICollection<ApplicationUser> applicants;
+        private ICollection<JobApplication> applicants;
 
         private ICollection<ApplicationUser> viewers; 
 
         public JobPost()
         {
-            this.applicants=new HashSet<ApplicationUser>();
+            this.applicants=new HashSet<JobApplication>();
             this.viewers=new HashSet<ApplicationUser>();
         }
 
@@ -58,7 +58,7 @@
 
         public string ProfileImage { get; set; }
 
-        public virtual ICollection<ApplicationUser> Applicants
+        public virtual ICollection<JobApplication> Applicants
         {
             get
             {
