@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Optimization;
@@ -15,6 +16,8 @@ namespace JobHunters.WebFormsClient
 
     using Microsoft.AspNet.Identity;
     using Microsoft.AspNet.Identity.EntityFramework;
+    using System.IO;
+    using System.Data.Entity.Validation;
 
     public class Global : HttpApplication
     {
@@ -82,14 +85,54 @@ namespace JobHunters.WebFormsClient
 
         private void SeedJobPosts()
         {
+            const int createdOnIntervalMinutes = 30 * 24 * 60; // a month
+            var rand = new Random();
+            var users = context.Users.ToArray();
+            var employers = context.Users.Where(u => u.UserName.StartsWith("emp")).ToArray();
+            var categories = context.Categories.ToArray();
+            var cities = context.Cities.ToArray();
+            var separator = new string[] { "\r\n!@#\r\n" };
+            var titles = File.ReadAllText(Server.MapPath("/SeedData/Titles.txt")).Split(separator, StringSplitOptions.RemoveEmptyEntries);
+            var descriptions = File.ReadAllText(Server.MapPath("/SeedData/Descriptions.txt")).Split(separator, StringSplitOptions.RemoveEmptyEntries);
+
             if (!context.JobPosts.Any())
             {
                 for (int i = 0; i < EmployersCount; i++)
                 {
-                    for (int j = 0, len = new Random().Next(1, 5); j < len; j++)
+                    var author = employers[i];
+                    for (int j = 0, len = rand.Next(1, 5); j < len; j++)
                     {
-                        
+                        var randJob = rand.Next(0, titles.Length);
+                        var title = titles[randJob];
+                        var createdOn = DateTime.Now.AddMinutes(rand.Next(-createdOnIntervalMinutes, createdOnIntervalMinutes));
+                        var description = descriptions[randJob];
+                        var views = rand.Next(0, 1000);
+                        var category = categories[rand.Next(0, categories.Length - 1)];
+                        var city = cities[rand.Next(0, cities.Length - 1)];
+                        var newJob = new JobPost {
+                            Title = title,
+                            CreatedOn = createdOn,
+                            Description = description,
+                            Author = author,
+                            Views = views,
+                            City = city,
+                            Category = category,
+                            OfferType = (OfferType)rand.Next(1, Enum.GetNames(typeof(OfferType)).Length),
+                            HierarchyLevel = (HierarchyLevel)rand.Next(1, Enum.GetNames(typeof(HierarchyLevel)).Length),
+                            WorkEmployement = (WorkEmployment)rand.Next(1, Enum.GetNames(typeof(WorkEmployment)).Length),
+                        };
+
+                        context.JobPosts.Add(newJob);
                     }
+                }
+
+                try
+                {
+                    context.SaveChanges();
+                }
+                catch (DbEntityValidationException ex)
+                {
+                    Console.Write(ex.EntityValidationErrors);
                 }
             }
         }

@@ -1,0 +1,332 @@
+﻿RESPONSIBILITIES:
+• Develop, create, and modify WEB based solutions 
+• Design software for client use with the aim of optimizing operational efficiency
+• Test and implement efficient cost-effective application solutions under limited supervision
+• Pro-actively resolve issues, work with clients to identify and specify complex business processes
+• Write and prepare specifications, manuals and flow charts for complex computer systems based on an understanding of the business or functional requirements
+• Collaborate with other developers, teams, and project management to develop timelines, share thoughts and coordinate efforts to ensure that project deliverables are met in a timely fashion
+
+REQUIREMENTS:
+• University degree in Information Technology or related field
+• Professional experience in development using Microsoft Visual Studio
+• Broad knowledge and experience using Microsoft .NET Framework 
+• Excellent command of English language
+
+OPTIONAL Experience with:
+• XCode or Xamarin development environment (iOS)
+• Windows 8 Metro Applications
+• Windows Phone Applications 
+• .NET Compact Framework
+• Oracle/SQL Server Database
+
+THE COMPANY OFFERS:
+• Challenging projects requiring work with cutting edge technologies
+• Excellent working conditions in a dynamic environment
+• Opportunities for professional growth and personal development
+• Become part of an international team of high professionals
+
+If you are challenged by this position and would like to join our team, send your CV and Motivation Letter in English with Ref. No WEBD
+
+All applications will be treated in the strictest confidentiality. Only the short-listed candidates will be contacted.
+!@#
+Currently we are looking for highly motivated software engineers to extend our team in Sofia.
+
+Key responsibilities of the role:
+• Implementation of components according project requirement
+• Technical requirements analysis, design preparation
+• Participating in design and architecture discussions
+• Unit and Integration testing/Test automation
+• Assessment of new, cutting age technologies
+
+Key skills and experience requirements:
+• Strong Knowledge in Java design patterns, algorithms and data structures
+• Strong knowledge in JEE, EJB, Struts, JSP, Portlets, XPath, HTML, JavaScript, jQuery, jQgrid
+• 3+ years of commercial projects using Java technologies
+• Knowledge in software development lifecycle
+• Bachelor or Master degree in IT field or similar
+• Good communication skills
+• Fluent English language
+An advantage would be:
+• Experience with other technologies – data bases, jdbc, servlets, jms, spring, nio etc.
+• Experience with EAI technologies – TIBCO, WebMethods, BEA etc.
+• German language
+
+Our offer:
+• Environment of high skilled and collaborative colleagues
+• Dynamic and interesting projects for world class clients
+• Opportunity to use cutting edge technologies in real projects
+
+Detailed Description and Job Requirements:
+Analyse, design, develop, troubleshoot and debug software programs for commercial or end user applications. Writes code, completes programming and performs testing and debugging of applications.
+
+As a member of the Java development team, you will perform low level design based on provided functional specifications. Specify, design and implement minor changes to existing software architecture. Build highly complex enhancements and resolve complex bugs. Build and execute unit tests and unit plans. Participate in code review process as reviewer and reviewee. 
+
+Duties and tasks are varied and complex needing independent judgment. High competent in own area of expertise. BS or MS degree or equivalent experience relevant to functional area. 3 years of software engineering or related experience.
+
+If you recognize your profile in the above mentioned requirements, we would be happy to contact you further. Please apply directly sending us your CV in English.
+
+Only the approved candidates would be contacted.
+!@#
+Your responsibilities
+
+• Design and write great code using Ruby on Rails for our US customer’s existing and new products, which are used by hundreds of thousands of users throughout the world and a large number of the world’s most prominent companies.
+• Collaborate closely with other members of the product team and QA to deliver quality software to the end users.
+• Promote the use best practice software development techniques to help the team continually improve.
+• Communicate on a daily basis in writing, orally and via online meetings with the engineering staff and the management of our US customer.
+
+
+Your qualifications
+
+• Technical educational background – computer science, information technology, telecommunications.
+• 3+ years of relevant software engineering experience, preference given to candidates who have shipped commercial services/products.
+• 2+ years of experience in Web Development with one of the following - Ruby on Rails, PHP (Zend, Symfony, Yii), Javascript (Node.js), Python (Django), Java EE, ASP .NET.
+• Experience with Ruby on Rails, AngularJS, jQuery, PostgreSQL will be considered a definite plus, but it is not mandatory.
+• Demonstrated ability to pick up new technologies quickly.
+• Experience with the Agile methodology is a plus.
+• Demonstrated ability to design and develop new features in large systems with commercial grade quality.
+• We are very collaborative - must play well with others.
+• Fluent English is a must.
+
+
+We offer
+
+• Attractive remuneration.
+• Challenging atmosphere and interesting projects. Working in the framework of the Agile development with cutting edge technologies such as the latest versions of Windows, Mac OS X, iOS (iPad and iPhone), Linux and Android.
+• Future career development within a well-established and fast growing company.
+
+To apply please send your CV in English. Only the qualified candidates will be contacted.
+!@#
+ОТГОВОРНОСТИ
+
+•	Планира и дефинира вътрешната софтуерна архитектура на най-ниско ниво за нуждите на компанията 
+•	Проектира, развива и доставя бизнес решения от край до край - събира изискванията, развива логически модели на данните, създава физическия дизайн на базите данни, оценява алтернативите за внедряване и формулира цялостния подход при проектирането
+•	Изготвя на подробни планове и схеми на кода (включително интерфейсите на класовете, моделите на данни и схемите на базите данни) за програмистите и участва в изготвянето на самия код. Изготвя документацията за дизайн на решението спрямо зададените стандарти
+•	Подпомага при нужда процесът на бизнес анализ в процесът на разработване на решения
+•	Участва в избора на операционна система и програмни средства за разработване
+•	Осъществява контрол на версиите на документите 
+
+ИЗИСКВАНИЯ
+
+•	Висше образование, степен бакалавър, специалност в областта на информационните технологии 
+•	Отлични познания в софтуерното проектиране, включващо използването на технологични проектни модели и най-добрите практики/постижения в областта
+•	Познания по SOA методология; Web services, SOAP, WSDL, XML
+•	Познания по програмни езици С/С++, Java, HTML и други; операционни системи UNIX, Linux, Windows; бази данни Oracle, MS SQL
+•	Познания по JBoss Application Platforms ще се считат за предимство
+•	Много добро владеене на английски език – писмено и говоримо
+•	Отлични умения за работа в екип
+•	Аналитичност
+•	Способност за работа под напрежение в динамична среда
+
+Ние Ви предлагаме
+
+•	Професионално развитие в най-голямата и високо технологична телекомуникационна компания в България
+•	Обучение за придобиване на специфични познания и умения, свързани с работата и бъдещото развитие в компанията
+•	Много добри възможности за възнаграждение спрямо приноса и постигнатите резултати
+•	Разнообразни и конкурентни допълнителни придобивки
+!@#
+We are looking for experienced candidates who can leverage industry proven design patterns, best practices, architectural principles and community standards in their production. Successful candidates will be able to demonstrate expertise, design acumen and team collaboration skills.
+
+Responsibilities:
+Create and enhance highly visible, client facing enterprise applications.
+Analyze application features and enhancements, business scenarios and user stories in order to quickly build domain knowledge necessary for effective development.
+Work from user stories and team collaboration to design and build high quality testable features.
+Work with User Experience Designers to implement consistent, performant, intuitive user interfaces.
+Provide professional quality technical communication and documentation as necessary.
+Work collaboratively with multiple distributed teams across disciplines and projects.
+Work with project teams through project and sprint planning to provide insight, assist in estimation and understand requirements.
+Provide technical guidance, and mentoring to others in areas of acquired expertise.
+
+Requirements:
+3+ years of experience as a User Interface Developer using HTML, CSS and JavaScript.
+Experience with technologies such as HTML, HTML 5, CSS, Razor Views, etc.
+Experience with JavaScript and technologies such as AJAX, JQuery, Node.js, and AngularJS.
+Experience with data interchange formats such as XML, JSON etc.
+Experience with software development languages such as Java, Ruby, C#.
+Familiar with UI Design Patterns such as MVC, MVP, and MVVM.
+Familiar with Web debugging and troubleshooting tools such as Fiddler, Wireshark, Firebug, Yslow, browser development tools, etc.
+Experienced building cross browser compatible applications.
+Experienced with software development methodologies such as Test Driven Development (TDD), Behavior Driven Development (BDD), Continuous Integration (CI), Pair Development, Agile Scrum, etc.
+Experienced with source code control and project management tools such as Team Foundation Server, GIT, Subversion, Target Process, Rally, Jira
+Knowledge of applicable data privacy laws (HIPAA, SOX) and confidentiality of work records and private information. 
+Excellent communication and interpersonal skills.
+University degree in Computer Science or related field (or equivalent experience).
+Fluency in English 
+
+
+Our offer:
+
+A competitive salary. 
+Object Systems Int. developers have the opportunity to improve individually and work with professional BG/USA teams. 
+Friendly work environment and nice attitude. 
+Modern and comfortable office. 
+Flexible working hours is an option.
+
+If you think you match the above requirements, please send your CV in English. 
+Only short-listed candidates will be contacted.
+!@#
+The qualified candidate will have a solid understanding of Web Application architecture. The Web Developer will be responsible for building applications that meet the business requirements, satisfy design aspects, and has reuse value for development.
+
+The Web Developer will be responsible for developing, documenting and maintaining .Net custom Web Applications.
+
+Responsibilities:
+
+∙ Designs and develops new features and/or maintains existing ASP.NET Web Applications
+∙ Develops code and supporting documentation
+∙ Works in a team environment to develop, test and deploy software changes (full lifecycle software development)
+∙ Works the JIRA backlog of features and bugs
+∙ Develops well-tested, high performance, scalable Web Applications
+∙ Stays current on new technologies and best practices
+∙ Other Web Development duties as required
+
+Qualifications:
+
+∙ Bachelor of Science, in Computer Science or Engineering or equivalent trade-off in related education
+∙ 5+ years work experience as an ASP.NET Web Application Developer, JavaScript, JQuery, XML, HTML, CSS, Web Services and AJAX
+. Experience with Version Control and Bug Tracking tools, preferable TortoiseSVN/VisualSVN and JIRA
+. Worked with Microsoft SQL Server, T-SQL, Stored Procedures and Database Design, IIS
+∙ Ability and eagerness to learn new languages and business environments quickly and effectively
+∙ Solid understanding of object-oriented programming, basic data structure theory and Computer Science fundamentals
+∙ Experience with full lifecycle software development
+∙ Ability to multi-task
+∙ Strong oral and written communication and listening skills
+∙ An eye for attention to detail and a software craftsmanship attitude
+∙ Strong analytical and problem-solving skills
+∙ English language knowledge - intermediate level at least 
+
+Nice to Have:
+
+. Knowledge Microsoft Visual Studio and SQL Management Studio
+∙ Knowledge Microsoft Windows Server and SQL Server admin tasks
+∙ Knowledge of LibrariesTools including: TelerikKendo UI, RedGate, Bootstrap, Newtosoft, AutoMapper, Elmah
+∙ Hands-on knowledge of development methodologies such as AgileScrum
+∙ Certification: MCSD, Web Applications
+!@#
+Job Description
+Leading a team of 4-7 developers and QA engineers
+Provide technical leadership for enterprise software projects based on ASP.NET and latest Microsoft .NET Framework, MVC and Entity Framework
+Day to day communication with US based team members, expert personnel and subject matter experts
+Participate in rapid, prototype-based, design sessions
+Review and analyze business requirements and provide technical perspective on approach, risk and estimated development time
+Develop flexible and robust platform architecture to support changing business requirements
+Design and Architect database backend as well as web-services to interface with external applications
+Leverage and generate reusable design standards to be utilized throughout platform
+Work with the latest development and server technologies from Microsoft, 3rd party web APIs for payment processing, networking, messaging, etc
+Participating in the design and development phase of software production
+Required skills:
+Experience in a leadership role
+Experience in designing and implementing N-Layer SaaS web based applications and SOA architecture design
+Ability to lead/handle/organize development process for complex software projects
+Excellent people skills – demonstrated ability to work with both technical and non technical individuals, both in gathering information and communicating direction and status.
+Excellent analytical skills and obsessive attention to detail
+5y+ experience in ASP.NET, MVC, Microsoft .NET Framework, WCF, EF and web technologies such as HTML, CSS, JavaScript, jQuery, XML
+Excellent knowledge of Design Patterns
+Experience and strong knowledge of UnitTesting or Test Driven Development
+4y+ experience with database design and implementation – Microsoft SQL Server, Oracle is an advantage
+Strong analytical and troubleshooting skills
+Excellent spoken and written English
+BS/MS Degree in Computer Science or equivalent
+Significant advantage would be
+Experience with SCRUM development methodology
+Experience in developing web and server side applications in ASP.NET and C#
+We offer
+Chance to work with latest technologies and learn many new things from proven technology experts in Bulgaria and US
+Chance to be part of the core team in a fast growing company aiming at becoming one of the biggest IT companies in Bulgaria
+Challenging projects that will help you prove as an expert and become a leader
+Highly-competitive salary and periodical increases responding to your skills
+Possibilities for career development in an international company
+Full-time employment
+Excellent working environment with several Lounge Zones
+Underground parking & close to metro and bus stations
+Flexible work time
+Additional Health and Dental Insurance
+Opportunity for funding your product idea and turning it into reality
+Football team to join if you’d like
+Free Salsa lessons
+Free Guitar lessons
+!@#
+Job Description
+Develop software projects based on ASP.NET MVC and Microsoft .NET Framework in C#
+Participating in the development portion of software production
+Design and create database backend as well as web-services to interface with external applications
+Work with the latest development and server technologies from Microsoft and 3rd party web APIs for payment processing, networking, messaging, etc.
+Requirements
+Strong experience in ASP.NET, Microsoft .NET Framework – .NET 4.0, .NET 4.5 and web technologies such as HTML 5, CSS 3, JavaScript and jQuery
+Experience in database design and implementation – Microsoft SQL Server 2008/2012.
+Spoken and written English
+A passion for building great software
+Responsible and team oriented person
+!@#
+We are looking for talented professionals who share our passion for technology, innovation and excellence to help us enhance our virtualization solutions and increase our market-leading position. We are targeting the enterprise markets and our products must scale well with millions of objects so please bear in mind when applying that we need developers who understand (or are willing to learn) the specifics of the enterprise level programming.
+
+Responsibilities:
+- Design and implement the next generation architecture of our virtualization products
+- Be part of a software development team working in collaboration with management, quality assurance, user experience and technical publications teams
+- You will define/analyze the product requirements, write/read functional and design specifications, write/support the code
+- You will perform code reviews to the rest of the team members and will receive code reviews of your code as well
+- You will have to adhere to the internal processes during the whole development cycle – idea, patent, requirements, specifications, designs, implementation, bug fixing, QA, support, etc.
+
+Requirements:
+- Experience with product development or strong willingness to switch from outsourcing to product development
+- Willingness to innovate, learn and share knowledge, invent and patent new algorithms and technologies
+- Minimum 2 years of professional programming experience Java and related technologies
+- Experience with HTML5, JavaScript or other presentation technologies will be considered a plus
+- Experience with design and implementation of complex user interfaces – custom controls, live updates, in-place editing, virtual data abstractions, MVC, performance optimizations for millions of objects, etc.
+- Experience with enterprise architectures – remote method invocations, extensive XML usage, stateless designs, load balancing, SSL security, etc.
+- Experience with multi-tiered architectures (Service-Application-Presentation)
+- Willingness to use different programming languages to address the specific product needs (Flex, Java, C++, Perl, Python, C#, Batch Scripting, etc.)
+- General programming knowledge - data structures, algorithms, design patterns, memory management, etc.
+- Excellent analytical and problem solving skills
+- Willingness to work without close supervision and with proactive goal-oriented attitude
+- Excellent communication skills and fluent English (speaking/reading/writing)
+
+We offer:
+- Attractive compensation package - competitive salary, flexible bonus scheme, company sponsored mobile phone plan and additional long term incentives
+- Individual career path - management and technical career growth, enhanced by learning and development program, regular performance assessment, teams of world-wide IT professionals
+- Healthy work environment - company sponsored medical program, food and beverage program, sport activities, open communication
+- Work-life balance – 25 days paid vacation, regular team buildings and celebrations
+!@#
+We are looking for talented and motivated Middleware/Database Developer using Javascript (Node.JS) and Java to join our team in Sofia. This would be an opportunity for software creativity and leadership. We will expect you to be able to take on major responsibilities and to be innovative.
+
+
+As a part of our team your main responsibilities will be:
+
+Design, code and test Node.js backend system
+Design, code, test and maintain graph-based database extension
+Create unit and functional tests
+Document and maintain the system
+Investigate and resolve problems
+Work collaboratively with other developers and utilize agile development practices
+
+The skills required for that position are:
+
+3+ years of knowledge of pure JavaScript and common node.js/javascript libraries/frameworks
+Knows and follows good web practices and standards
+A related Degree-level qualification would be considered as an advantage
+Fluency in English is a must
+Creative thinking, flexibility, good communication skills and proactive approach
+Exceptional ability to learn new skills
+
+It would be beneficial if you have the following skills:
+
+MongoDB knowledge
+Neo4j or other graph database knowledge
+Elasticsearch knowledge
+Linux knowledge
+Memcached knowledge
+Java programming experience
+
+We offer:
+
+Attractive remuneration;
+Friendly work environment;
+Excellent package based on skill set and experience;
+Performance bonuses;
+Opportunity to expand your professional knowledge and experience;
+Opportunity to work in a fast growing company on challenging projects.
+Food vouchers and experience payment
+Weekly office massages partially paid by the company
+Fridge full of healthy food and drinks
+
+If you are interested in this offer, please send your portfolio and CV in English.
+All job applications will be treated strictly confidential. Only short-listed candidates will be contacted.
+!@#
