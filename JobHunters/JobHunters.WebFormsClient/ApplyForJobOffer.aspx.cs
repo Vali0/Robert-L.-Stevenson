@@ -78,7 +78,7 @@ namespace JobHunters.WebFormsClient
                     this.Cv.PostedFile.ContentType == "application/msword")
                 {
                     var userName = currentUser.UserName;
-                    var filePath = userName + "_curriculum"  + ".docx";
+                    var filePath = userName + "_curriculum_"+offerItem.Id+"_"  + ".docx";
                     this.Cv.SaveAs(Server.MapPath("~/Uploads/cv/"+filePath));
                     var application = new JobApplication()
                     {
