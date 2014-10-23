@@ -91,3 +91,34 @@ C:\Users\Valentin\Desktop\Robert TW\Robert-L.-Stevenson\JobHunters\JobHunters.Da
 C:\Users\Valentin\Desktop\Robert TW\Robert-L.-Stevenson\JobHunters\JobHunters.Data\obj\Debug\JobHunters.Data.csprojResolveAssemblyReference.cache
 C:\Users\Valentin\Desktop\Robert TW\Robert-L.-Stevenson\JobHunters\JobHunters.Data\obj\Debug\JobHunters.Data.dll
 C:\Users\Valentin\Desktop\Robert TW\Robert-L.-Stevenson\JobHunters\JobHunters.Data\obj\Debug\JobHunters.Data.pdb
+C:\Users\Antoni\Source\Repos\Robert-L.-Stevenson\JobHunters\JobHunters.Data\bin\Debug\JobHunters.Data.dll.config
+C:\Users\Antoni\Source\Repos\Robert-L.-Stevenson\JobHunters\JobHunters.Data\bin\Debug\JobHunters.Data.dll
+C:\Users\Antoni\Source\Repos\Robert-L.-Stevenson\JobHunters\JobHunters.Data\bin\Debug\JobHunters.Data.pdb
+C:\Users\Antoni\Source\Repos\Robert-L.-Stevenson\JobHunters\JobHunters.Data\bin\Debug\EntityFramework.dll
+C:\Users\Antoni\Source\Repos\Robert-L.-Stevenson\JobHunters\JobHunters.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Antoni\Source\Repos\Robert-L.-Stevenson\JobHunters\JobHunters.Data\bin\Debug\JobHunters.Models.dll
+C:\Users\Antoni\Source\Repos\Robert-L.-Stevenson\JobHunters\JobHunters.Data\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Antoni\Source\Repos\Robert-L.-Stevenson\JobHunters\JobHunters.Data\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Antoni\Source\Repos\Robert-L.-Stevenson\JobHunters\JobHunters.Data\bin\Debug\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\Antoni\Source\Repos\Robert-L.-Stevenson\JobHunters\JobHunters.Data\bin\Debug\Microsoft.Owin.dll
+C:\Users\Antoni\Source\Repos\Robert-L.-Stevenson\JobHunters\JobHunters.Data\bin\Debug\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\Antoni\Source\Repos\Robert-L.-Stevenson\JobHunters\JobHunters.Data\bin\Debug\Microsoft.Owin.Security.Cookies.dll
+C:\Users\Antoni\Source\Repos\Robert-L.-Stevenson\JobHunters\JobHunters.Data\bin\Debug\Microsoft.Owin.Security.dll
+C:\Users\Antoni\Source\Repos\Robert-L.-Stevenson\JobHunters\JobHunters.Data\bin\Debug\Microsoft.Owin.Security.OAuth.dll
+C:\Users\Antoni\Source\Repos\Robert-L.-Stevenson\JobHunters\JobHunters.Data\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Antoni\Source\Repos\Robert-L.-Stevenson\JobHunters\JobHunters.Data\bin\Debug\Owin.dll
+C:\Users\Antoni\Source\Repos\Robert-L.-Stevenson\JobHunters\JobHunters.Data\bin\Debug\JobHunters.Models.pdb
+C:\Users\Antoni\Source\Repos\Robert-L.-Stevenson\JobHunters\JobHunters.Data\bin\Debug\EntityFramework.xml
+C:\Users\Antoni\Source\Repos\Robert-L.-Stevenson\JobHunters\JobHunters.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Antoni\Source\Repos\Robert-L.-Stevenson\JobHunters\JobHunters.Data\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Antoni\Source\Repos\Robert-L.-Stevenson\JobHunters\JobHunters.Data\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Antoni\Source\Repos\Robert-L.-Stevenson\JobHunters\JobHunters.Data\bin\Debug\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\Antoni\Source\Repos\Robert-L.-Stevenson\JobHunters\JobHunters.Data\bin\Debug\Microsoft.Owin.xml
+C:\Users\Antoni\Source\Repos\Robert-L.-Stevenson\JobHunters\JobHunters.Data\bin\Debug\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\Antoni\Source\Repos\Robert-L.-Stevenson\JobHunters\JobHunters.Data\bin\Debug\Microsoft.Owin.Security.xml
+C:\Users\Antoni\Source\Repos\Robert-L.-Stevenson\JobHunters\JobHunters.Data\bin\Debug\Microsoft.Owin.Security.Cookies.xml
+C:\Users\Antoni\Source\Repos\Robert-L.-Stevenson\JobHunters\JobHunters.Data\bin\Debug\Microsoft.Owin.Security.OAuth.xml
+C:\Users\Antoni\Source\Repos\Robert-L.-Stevenson\JobHunters\JobHunters.Data\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Antoni\Source\Repos\Robert-L.-Stevenson\JobHunters\JobHunters.Data\obj\Debug\JobHunters.Data.csprojResolveAssemblyReference.cache
+C:\Users\Antoni\Source\Repos\Robert-L.-Stevenson\JobHunters\JobHunters.Data\obj\Debug\JobHunters.Data.dll
+C:\Users\Antoni\Source\Repos\Robert-L.-Stevenson\JobHunters\JobHunters.Data\obj\Debug\JobHunters.Data.pdb
