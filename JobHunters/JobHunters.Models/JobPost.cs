@@ -1,10 +1,22 @@
 ﻿namespace JobHunters.Models
 {
     using System;
+    using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
+    using System.Security.Policy;
 
     public class JobPost
     {
+        private ICollection<ApplicationUser> applicants;
+
+        private ICollection<ApplicationUser> viewers; 
+
+        public JobPost()
+        {
+            this.applicants=new HashSet<ApplicationUser>();
+            this.viewers=new HashSet<ApplicationUser>();
+        }
+
         public int Id { get; set; }
 
         [Required]
@@ -44,5 +56,28 @@
         [Required]
         public WorkEmployment WorkEmployement { get; set; }
 
+        public virtual ICollection<ApplicationUser> Applicants
+        {
+            get
+            {
+                return this.applicants;
+            }
+            set
+            {
+                this.applicants = value;
+            }
+        }
+
+        public virtual ICollection<ApplicationUser> Viewers
+        {
+            get
+            {
+                return this.viewers;
+            }
+            set
+            {
+                this.viewers = value;
+            }
+        } 
     }
 }

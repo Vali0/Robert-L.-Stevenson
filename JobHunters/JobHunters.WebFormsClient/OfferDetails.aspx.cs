@@ -1,75 +1,84 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
-
-namespace JobHunters.WebFormsClient
+﻿namespace JobHunters.WebFormsClient
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Web;
+
     using JobHunters.Data;
     using JobHunters.Data.UnitOfWork;
     using JobHunters.Models;
+
+    using Microsoft.AspNet.Identity;
+    using Microsoft.AspNet.Identity.EntityFramework;
 
     public partial class OfferDetails : System.Web.UI.Page
     {
         private static IJobHuntersData data;
 
+        private static ApplicationDbContext context;
+
         private JobPost offerItem;
 
         protected void Page_PreInit(object sender, EventArgs e)
         {
-            data = new ApplicationData(new ApplicationDbContext());
+            context = new ApplicationDbContext();
+            data = new ApplicationData(context);
         }
 
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!HttpContext.Current.User.Identity.IsAuthenticated)
             {
-                Response.Redirect("/Account/Login.aspx");
+                this.Response.Redirect("/Account/Login.aspx");
             }
-            var urlParams = ((List<string>)RouteData.DataTokens["FriendlyUrlSegments"]);
+            var urlParams = ((List<string>)this.RouteData.DataTokens["FriendlyUrlSegments"]);
             if (urlParams.Any())
             {
                 var index = urlParams[0];
                 int indexParsed;
                 if (!int.TryParse(index, out indexParsed))
                 {
-                    errContainer.Visible = true;
-                    errContainer.InnerText = "Invalid Item ID !";
+                    this.errContainer.Visible = true;
+                    this.errContainer.InnerText = "Invalid Item ID !";
                     return;
                 }
 
                 var item = data.JobPosts.All().FirstOrDefault(x => x.Id == indexParsed);
                 if (item == null)
                 {
-                    errContainer.Visible = true;
-                    errContainer.InnerText = "There is no Job Offer with that ID !";
+                    this.errContainer.Visible = true;
+                    this.errContainer.InnerText = "There is no Job Offer with that ID !";
                     return;
                 }
-                offerItem = item;
+                this.offerItem = item;
             }
         }
 
         public JobPost Select()
         {
-            if (offerItem == null)
+            if (this.offerItem == null)
             {
-                errContainer.Visible = true;
-                errContainer.InnerText = "There is no Job Offer with that ID !";
+                this.errContainer.Visible = true;
+                this.errContainer.InnerText = "There is no Job Offer with that ID !";
                 return null;
             }
-            if (!IsPostBack && Session[offerItem.Id.ToString()] == null)
+            if (!this.IsPostBack
+                && this.offerItem.Viewers.All(x => x.Id != HttpContext.Current.User.Identity.GetUserId())
+                && !HttpContext.Current.User.IsInRole("Admin")
+                && !HttpContext.Current.User.IsInRole("Employer"))
             {
-                offerItem.Views += 1;
-                Session[offerItem.Id.ToString()] = "viewed";
-                if (offerItem.Author == null)
+                this.offerItem.Views += 1;
+                var usrManager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(context));
+                this.offerItem.Viewers.Add(usrManager.FindById(HttpContext.Current.User.Identity.GetUserId()));
+
+                if (this.offerItem.Author == null)
                 {
                 }
-                data.JobPosts.Update(offerItem);
+                data.JobPosts.Update(this.offerItem);
                 data.SaveChanges();
             }
-            return offerItem;
+            return this.offerItem;
         }
     }
 }

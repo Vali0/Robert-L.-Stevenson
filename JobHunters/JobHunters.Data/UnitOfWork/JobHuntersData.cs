@@ -54,8 +54,16 @@
 
         public void SaveChanges()
         {
-
-            this.context.SaveChanges();
+            try
+            {
+                this.context.SaveChanges();
+            }
+            catch (DbEntityValidationException e)
+            {
+                
+                throw;
+            }
+            
 
         }
 
