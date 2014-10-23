@@ -88,6 +88,14 @@
             {
                 this.applyBtn.Visible = true;
             }
+            else
+            {
+                if (this.offerItem.Applicants.Contains(currentUser))
+                {
+                    this.applyBtn.CssClass += " disabled";
+                    this.applyBtn.Text = "Your application is being considered!";
+                }
+            }
             return this.offerItem;
         }
     }
