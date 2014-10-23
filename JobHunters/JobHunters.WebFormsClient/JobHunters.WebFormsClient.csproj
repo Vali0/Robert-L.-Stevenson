@@ -215,7 +215,6 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Site.Master" />
-    <Content Include="Uploads\images\dwq%40abv.bg.png" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
@@ -418,7 +417,10 @@
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
     </Compile>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Uploads\cv\" />
+    <Folder Include="Uploads\images\" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\JobHunters.Data\JobHunters.Data.csproj">
       <Project>{b8221ef1-8535-4f10-a418-7c18b43bcc47}</Project>

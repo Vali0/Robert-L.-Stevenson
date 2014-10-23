@@ -136,6 +136,13 @@
                 return;
             }
             item.Viewers.Clear();
+            var applicationsToDelete = data.JobApplications.All().Where(x=>x.JobPostId==item.Id);
+
+            foreach (var app in applicationsToDelete)
+            {
+                data.JobApplications.Delete(app);
+            }
+            data.SaveChanges();
             item.Applicants.Clear();
             data.JobPosts.Update(item);
             if (item.Author==null)
