@@ -167,6 +167,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\bootstrap.theme.min.css" />
     <Content Include="Content\Site.css" />
+    <Content Include="DetailedSearch.aspx" />
     <Content Include="Employer\CreateOffer.aspx" />
     <Content Include="Employer\MyOffers.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -366,6 +367,13 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DetailedSearch.aspx.cs">
+      <DependentUpon>DetailedSearch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DetailedSearch.aspx.designer.cs">
+      <DependentUpon>DetailedSearch.aspx</DependentUpon>
     </Compile>
     <Compile Include="Employer\CreateOffer.aspx.cs">
       <DependentUpon>CreateOffer.aspx</DependentUpon>
