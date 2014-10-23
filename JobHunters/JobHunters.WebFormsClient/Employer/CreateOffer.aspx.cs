@@ -70,7 +70,8 @@
                     this.UploadImage.PostedFile.ContentType == "image/png")
                 {
                     filename = usrManager.FindById(HttpContext.Current.User.Identity.GetUserId()).UserName;
-                    this.UploadImage.SaveAs(this.Server.MapPath("~/Uploads/Images/") + filename);
+                    filename = filename + " - " + this.JobTitle.Text;
+                    this.UploadImage.SaveAs(this.Server.MapPath("~/Uploads/Images/") + filename + ".png");
                 }
             }
 
