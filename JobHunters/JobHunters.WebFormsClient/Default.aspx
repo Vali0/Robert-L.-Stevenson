@@ -25,70 +25,64 @@
         </div>
     </div>
     <div class="row text-center">
-        <asp:Button ID="ButtonDetailedSearch" runat="server" CssClass="btn btn-lg btn-success" Text="Detailed Search" 
-            OnClick="ButtonDetailedSearch_Click" />
-    </div>
-    <br />
-    <div class="row text-center">
         <div class="panel panel-primary">
             <div class="panel-heading">
-                     <h2>Latest Job Offers:</h2>
+                <h2>Latest Job Offers:</h2>
             </div>
             <div class="panel-body">
-                         <asp:ListView ID="ListViewMyOffers" runat="server"
-        SelectMethod="ListViewMyOffers_Select"
-        ItemType="JobHunters.Models.JobPost"
-        InsertItemPosition="None"
-        DataKeyNames="Id"
-        >
+                <asp:ListView ID="ListViewMyOffers" runat="server"
+                              SelectMethod="ListViewMyOffers_Select"
+                              ItemType="JobHunters.Models.JobPost"
+                              InsertItemPosition="None"
+                              DataKeyNames="Id"
+                              >
 
-        <LayoutTemplate>
-            <table class="table table-bordered table-hover table-responsive table-striped">
-                <thead>
-                    <tr>
-                        <th>Title</th>
-                        <th>Description</th>
-                        <th>City</th>
-                        <th>Category</th>
-                        <th>Offer Type</th>
-                        <th>Hierarchy Level</th>
-                        <th>Employment</th>
-                        <th>Date Created</th>
-                        <th>View Count</th>
-                    </tr>
-                </thead>
-                <tbody>
-                     <div  id="itemPlaceholder" runat="server"></div>
-                </tbody>
-               
-            </table>
-        </LayoutTemplate>
+                    <LayoutTemplate>
+                        <table class="table table-bordered table-hover table-responsive table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Title</th>
+                                    <th>Description</th>
+                                    <th>City</th>
+                                    <th>Category</th>
+                                    <th>Offer Type</th>
+                                    <th>Hierarchy Level</th>
+                                    <th>Employment</th>
+                                    <th>Date Created</th>
+                                    <th>View Count</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <div  id="itemPlaceholder" runat="server"></div>
+                            </tbody>
 
-        <EmptyDataTemplate>
-            <div class="alert alert-warning">No Items To Show.</div>
-        </EmptyDataTemplate>
+                        </table>
+                    </LayoutTemplate>
 
-        <ItemTemplate>
-            <tr class="item">
-                <td class="text-primary"><a href="/OfferDetails.aspx/<%#: Item.Id %>"><%#: Item.Title %></a></td>
-                <td><%#: Item.Description.Substring(0,Item.Description.Length>10?10:Item.Description.Length)+"..." %></td>
+                    <EmptyDataTemplate>
+                        <div class="alert alert-warning">No Items To Show.</div>
+                    </EmptyDataTemplate>
 
-                <td class="text-info"><%#: Item.City.Name %></td> 
-                <td><%#: Item.Category.Name %></td>
-                <td><%#: Enum.GetName(typeof(OfferType),Item.OfferType) %></td>
-                <td><%#: Enum.GetName(typeof(HierarchyLevel),Item.HierarchyLevel) %></td>
-                <td><%#: Enum.GetName(typeof(WorkEmployment),Item.WorkEmployement) %></td>
-                <td><%#: Item.CreatedOn %></td>
-                <td><%#: Item.Views %></td>
-               
-              
-            </tr>
-        </ItemTemplate>
-    </asp:ListView>
+                    <ItemTemplate>
+                        <tr class="item">
+                            <td class="text-primary">
+                                <a href="/OfferDetails.aspx/<%#: Item.Id %>"><%#: Item.Title %></a>
+                            </td>
+                            <td><%#: Item.Description.Substring(0,Item.Description.Length>10?10:Item.Description.Length)+"..." %></td>
+
+                            <td class="text-info"><%#: Item.City.Name %></td>
+                            <td><%#: Item.Category.Name %></td>
+                            <td><%#: Enum.GetName(typeof(OfferType),Item.OfferType) %></td>
+                            <td><%#: Enum.GetName(typeof(HierarchyLevel),Item.HierarchyLevel) %></td>
+                            <td><%#: Enum.GetName(typeof(WorkEmployment),Item.WorkEmployement) %></td>
+                            <td><%#: Item.CreatedOn %></td>
+                            <td><%#: Item.Views %></td>
+
+                        </tr>
+                    </ItemTemplate>
+                </asp:ListView>
             </div>
         </div>
-   
-        
 
     </div>
 
