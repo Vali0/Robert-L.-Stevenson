@@ -84,6 +84,7 @@
     <Compile Include="Repositories\CitiesRepository.cs" />
     <Compile Include="Repositories\GenericRepository.cs" />
     <Compile Include="Repositories\IGenericRepository.cs" />
+    <Compile Include="Repositories\JobApplicationsRepository.cs" />
     <Compile Include="Repositories\JobPostsRepository.cs" />
     <Compile Include="Repositories\UsersRepository.cs" />
     <Compile Include="UnitOfWork\IJobHuntersData.cs" />

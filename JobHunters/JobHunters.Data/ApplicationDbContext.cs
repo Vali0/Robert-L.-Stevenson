@@ -25,5 +25,13 @@
         public virtual IDbSet<City> Cities { get; set; }
 
         public virtual IDbSet<Category> Categories { get; set; }
+
+        public virtual IDbSet<JobApplication> JobApplications { get; set; }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+            modelBuilder.Entity<JobApplication>().HasRequired(j=>j.JobPost).WithMany().WillCascadeOnDelete(false);
+        }
     }
 }

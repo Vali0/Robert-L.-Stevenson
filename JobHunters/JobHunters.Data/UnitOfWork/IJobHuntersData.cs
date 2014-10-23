@@ -12,6 +12,8 @@
 
         CategoriesRepository Categories { get; }
 
+        JobApplicationsRepository JobApplications { get; }
+
         void SaveChanges();
     }
 }

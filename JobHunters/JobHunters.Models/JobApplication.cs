@@ -10,6 +10,8 @@ namespace JobHunters.Models
 
     public class JobApplication
     {
+        public int Id { get; set; }
+
         [Required]
         public string AuthorId { get; set; }
 

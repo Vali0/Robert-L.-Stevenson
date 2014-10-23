@@ -81,6 +81,7 @@
     <Compile Include="Category.cs" />
     <Compile Include="City.cs" />
     <Compile Include="HierarchyLevel.cs" />
+    <Compile Include="JobApplication.cs" />
     <Compile Include="JobPost.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="OfferType.cs" />

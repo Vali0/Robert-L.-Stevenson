@@ -60,6 +60,7 @@
         {
             var usrManager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(context));
             var currentUser = usrManager.FindById(HttpContext.Current.User.Identity.GetUserId());
+            var currentUserId = HttpContext.Current.User.Identity.GetUserId();
 
             if (this.offerItem == null)
             {
@@ -68,7 +69,7 @@
                 return null;
             }
             if (!this.IsPostBack
-                && this.offerItem.Viewers.All(x => x.Id != HttpContext.Current.User.Identity.GetUserId())
+                && this.offerItem.Viewers.All(x => x.Id != currentUserId)
                 && !HttpContext.Current.User.IsInRole("Admin") && !HttpContext.Current.User.IsInRole("Employer"))
             {
                 this.offerItem.Views += 1;
@@ -81,14 +82,14 @@
                 data.JobPosts.Update(this.offerItem);
                 data.SaveChanges();
             }
-            if (!this.offerItem.Applicants.Contains(currentUser) && !HttpContext.Current.User.IsInRole("Admin")
+            if (this.offerItem.Applicants.All(x => x.AuthorId != currentUserId) && !HttpContext.Current.User.IsInRole("Admin")
                 && !HttpContext.Current.User.IsInRole("Employer"))
             {
                 this.applyBtn.Visible = true;
             }
             else
             {
-                if (this.offerItem.Applicants.Contains(currentUser))
+                if (this.offerItem.Applicants.Any(x=>x.AuthorId==currentUserId))
                 {
                     this.applyBtn.CssClass += " disabled";
                     this.applyBtn.Text = "Your application is being considered!";

@@ -56,7 +56,6 @@ C:\Users\Valentin\Desktop\Robert TW\Robert-L.-Stevenson\JobHunters\JobHunters.Mo
 C:\Users\Valentin\Desktop\Robert TW\Robert-L.-Stevenson\JobHunters\JobHunters.Models\obj\Debug\JobHunters.Models.csprojResolveAssemblyReference.cache
 C:\Users\Valentin\Desktop\Robert TW\Robert-L.-Stevenson\JobHunters\JobHunters.Models\obj\Debug\JobHunters.Models.dll
 C:\Users\Valentin\Desktop\Robert TW\Robert-L.-Stevenson\JobHunters\JobHunters.Models\obj\Debug\JobHunters.Models.pdb
-D:\TELERIK\Teamworks\Robert-L.-Stevenson\JobHunters\JobHunters.Models\obj\Debug\JobHunters.Models.csprojResolveAssemblyReference.cache
 D:\TELERIK\Teamworks\Robert-L.-Stevenson\JobHunters\JobHunters.Models\bin\Debug\JobHunters.Models.dll.config
 D:\TELERIK\Teamworks\Robert-L.-Stevenson\JobHunters\JobHunters.Models\bin\Debug\JobHunters.Models.dll
 D:\TELERIK\Teamworks\Robert-L.-Stevenson\JobHunters\JobHunters.Models\bin\Debug\JobHunters.Models.pdb
@@ -83,5 +82,6 @@ D:\TELERIK\Teamworks\Robert-L.-Stevenson\JobHunters\JobHunters.Models\bin\Debug\
 D:\TELERIK\Teamworks\Robert-L.-Stevenson\JobHunters\JobHunters.Models\bin\Debug\Microsoft.Owin.Security.Cookies.xml
 D:\TELERIK\Teamworks\Robert-L.-Stevenson\JobHunters\JobHunters.Models\bin\Debug\Microsoft.Owin.Security.OAuth.xml
 D:\TELERIK\Teamworks\Robert-L.-Stevenson\JobHunters\JobHunters.Models\bin\Debug\Newtonsoft.Json.xml
+D:\TELERIK\Teamworks\Robert-L.-Stevenson\JobHunters\JobHunters.Models\obj\Debug\JobHunters.Models.csprojResolveAssemblyReference.cache
 D:\TELERIK\Teamworks\Robert-L.-Stevenson\JobHunters\JobHunters.Models\obj\Debug\JobHunters.Models.dll
 D:\TELERIK\Teamworks\Robert-L.-Stevenson\JobHunters\JobHunters.Models\obj\Debug\JobHunters.Models.pdb

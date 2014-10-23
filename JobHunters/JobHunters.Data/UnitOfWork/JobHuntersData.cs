@@ -28,6 +28,14 @@
             }
         }
 
+        public JobApplicationsRepository JobApplications
+        {
+            get
+            {
+                return (JobApplicationsRepository)this.GetRepository<JobApplication>();
+            }
+        }
+
         public UsersRepository Users
         {
             get
