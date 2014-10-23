@@ -19,7 +19,7 @@
 
         protected void Page_PreInit(object sender, EventArgs e)
         {
-            context=new ApplicationDbContext();
+            context = new ApplicationDbContext();
             data = new ApplicationData(context);
         }
 
@@ -65,7 +65,7 @@
             var usrManager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(context));
             var offer = new JobPost()
                             {
-                                Author =  usrManager.FindById(HttpContext.Current.User.Identity.GetUserId()),
+                                Author = usrManager.FindById(HttpContext.Current.User.Identity.GetUserId()),
                                 AuthorId = HttpContext.Current.User.Identity.GetUserId(),
                                 CategoryId = data.Categories.All().First(x => x.Id == selectedCategoryId).Id,
                                 CityId = data.Cities.All().First(x => x.Id == selectedCityId).Id,
