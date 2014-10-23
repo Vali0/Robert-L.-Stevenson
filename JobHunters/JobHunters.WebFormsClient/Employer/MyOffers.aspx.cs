@@ -173,6 +173,7 @@
             Response.AddHeader("Content-Disposition", "attachment; filename="+path);
             Response.ContentType = "application/vnd.openxmlformats-officedocument.wordprocessingml.document";
             Response.WriteFile(Server.MapPath("~/Uploads/cv/"+path));
+            Response.End();
         }
     }
 }
