@@ -45,6 +45,11 @@ build/
 *.pidb
 *.log
 *.scc
+*.jpg
+*.png
+*.jpeg
+*.gif
+[Ww]eb.config
 
 # Visual C++ cache files
 ipch/
