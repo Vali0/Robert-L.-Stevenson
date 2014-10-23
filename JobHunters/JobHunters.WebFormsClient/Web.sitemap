@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
-    <siteMapNode url="~/Default.aspx" title="Home"  description="Site Home">
-        <siteMapNode url="~/Employer/CreateOffer.aspx" title="Create Offer"  description="Create New Job Offer" />
-        <siteMapNode url="~/Employer/MyOffers.aspx" title="My Offers"  description="View and edit my job offers" />
-    </siteMapNode>
+  <siteMapNode url="~/Default.aspx" title="Home"  description="Site Home">
+    <siteMapNode url="~/Employer/CreateOffer.aspx" title="Create Offer"  description="Create New Job Offer" />
+    <siteMapNode url="~/Employer/MyOffers.aspx" title="My Offers"  description="View and edit my job offers" />
+    <siteMapNode url="~/AllOffersList.aspx" title="List offers"  description="View all offers" />
+  </siteMapNode>
 </siteMap>
