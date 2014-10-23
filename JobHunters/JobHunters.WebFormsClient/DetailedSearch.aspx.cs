@@ -121,11 +121,11 @@ namespace JobHunters.WebFormsClient
 
             var offers = data.JobPosts.All();
 
-            if (!string.IsNullOrEmpty(city))
+            if (!string.IsNullOrEmpty(city) && city!="--Select All--")
             {
                 offers = offers.Where(o => o.City.Name == city);
             }
-            if (!string.IsNullOrEmpty(category))
+            if (!string.IsNullOrEmpty(category) && category != "--Select All--")
             {
                 offers = offers.Where(o => o.Category.Name == category);
             }
