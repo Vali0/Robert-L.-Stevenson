@@ -56,6 +56,10 @@
         [Required]
         public WorkEmployment WorkEmployement { get; set; }
 
+<<<<<<< HEAD
+        public string ProfileImage { get; set; }
+
+=======
         public virtual ICollection<ApplicationUser> Applicants
         {
             get
@@ -79,5 +83,6 @@
                 this.viewers = value;
             }
         } 
+>>>>>>> f2f0f37476aab883166ac34db68e8f7f573401da
     }
 }

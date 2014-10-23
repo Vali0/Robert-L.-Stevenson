@@ -30,8 +30,8 @@
                     SelectMethod="Select_Cities" />
             </div>
         </div>
-        
-                <div class="form-group">
+
+        <div class="form-group">
             <asp:Label runat="server" AssociatedControlID="Category" CssClass="col-md-2 control-label">Category</asp:Label>
             <div class="col-md-10">
                 <asp:DropDownList runat="server" ID="Category" CssClass="form-control"
@@ -43,13 +43,13 @@
         <div class="form-group">
             <asp:Label runat="server" AssociatedControlID="JobType" CssClass="col-md-2 control-label">Type</asp:Label>
             <div class="col-md-10">
-                <asp:DropDownList runat="server" ID="JobType" CssClass="form-control"/>
+                <asp:DropDownList runat="server" ID="JobType" CssClass="form-control" />
             </div>
         </div>
         <div class="form-group">
             <asp:Label runat="server" AssociatedControlID="HierarchyLvl" CssClass="col-md-2 control-label">Hierarchy Level</asp:Label>
             <div class="col-md-10">
-                <asp:DropDownList runat="server" ID="HierarchyLvl" CssClass="form-control"/>
+                <asp:DropDownList runat="server" ID="HierarchyLvl" CssClass="form-control" />
             </div>
         </div>
         <div class="form-group">
@@ -64,5 +64,6 @@
                 <asp:Button runat="server" OnClick="CreateOffer_Click" Text="Publish" CssClass="btn btn-default" />
             </div>
         </div>
+             <asp:FileUpload ID="UploadImage" runat="server" />
     </div>
 </asp:Content>
