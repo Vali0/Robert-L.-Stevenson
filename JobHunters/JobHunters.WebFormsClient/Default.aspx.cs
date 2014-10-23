@@ -8,11 +8,9 @@ using System.Web.UI.WebControls;
 namespace JobHunters.WebFormsClient
 {
     using System.Data.Entity;
-
     using JobHunters.Data;
     using JobHunters.Data.UnitOfWork;
     using JobHunters.Models;
-
     using Microsoft.AspNet.Identity;
     using Microsoft.AspNet.Identity.EntityFramework;
 
@@ -35,8 +33,8 @@ namespace JobHunters.WebFormsClient
 
         public IEnumerable<JobPost> ListViewMyOffers_Select()
         {
-            data=new ApplicationData(new ApplicationDbContext());
-            var items = data.JobPosts.All().Include("City").Include("Category").OrderByDescending(x=>x.CreatedOn);
+            data = new ApplicationData(new ApplicationDbContext());
+            var items = data.JobPosts.All().Include("City").Include("Category").OrderByDescending(x => x.CreatedOn);
             return items;
         }
     }

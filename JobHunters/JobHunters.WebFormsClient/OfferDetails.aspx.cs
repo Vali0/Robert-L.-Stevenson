@@ -59,13 +59,12 @@ namespace JobHunters.WebFormsClient
                 errContainer.InnerText = "There is no Job Offer with that ID !";
                 return null;
             }
-            if (!IsPostBack && Session[offerItem.Id.ToString()]==null)
+            if (!IsPostBack && Session[offerItem.Id.ToString()] == null)
             {
                 offerItem.Views += 1;
                 Session[offerItem.Id.ToString()] = "viewed";
                 if (offerItem.Author == null)
                 {
-
                 }
                 data.JobPosts.Update(offerItem);
                 data.SaveChanges();

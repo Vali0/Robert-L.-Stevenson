@@ -29,7 +29,7 @@ namespace JobHunters.WebFormsClient
 
         }
 
-        public SortDirection sortDirection
+        public SortDirection SortDirection
         {
             get
             {
@@ -57,11 +57,10 @@ namespace JobHunters.WebFormsClient
 
         public IQueryable<JobPost> ListViewAllOffers_Select([ViewState("OrderBy")]String OrderBy = null)
         {
-            var currentUserId = HttpContext.Current.User.Identity.GetUserId();
             var items = data.JobPosts.All().Include("City").Include("Category");
             if (OrderBy != null)
             {
-                switch (sortDirection)
+                switch (SortDirection)
                 {
                     case SortDirection.Ascending:
                         items = items.OrderByDescending(OrderBy);
@@ -109,26 +108,6 @@ namespace JobHunters.WebFormsClient
             return Enum.GetNames(typeof(WorkEmployment))
                        .Select(x => new { Text = x, Value = x })
                        .ToList();
-        }
-
-        public void Update(int Id)
-        {
-            data = new ApplicationData(new ApplicationDbContext());
-            JobPost item = data.JobPosts.All().FirstOrDefault(x => x.Id == Id);
-            if (item == null)
-            {
-                ModelState.AddModelError("",
-                    String.Format("Product with id {0} was not found", Id));
-                return;
-            }
-
-            TryUpdateModel(item);
-
-            if (ModelState.IsValid)
-            {
-                data.JobPosts.Update(item);
-                data.SaveChanges();
-            }
         }
 
         protected void ListViewAllOffers_Sorting(object sender, ListViewSortEventArgs e)
