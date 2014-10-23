@@ -36,6 +36,7 @@
                             <asp:LinkButton runat="server" CommandName="sort" CommandArgument="CreatedOn">Date Created</asp:LinkButton></th>
                         <th>
                             <asp:LinkButton runat="server" CommandName="sort" CommandArgument="Views">View Count</asp:LinkButton></th>
+                         <th>Applicants</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -80,11 +81,12 @@
                 <td><%#: Enum.GetName(typeof(WorkEmployment),Item.WorkEmployement) %></td>
                 <td><%#: Item.CreatedOn %></td>
                 <td><%#: Item.Views %></td>
+                <td><asp:LinkButton runat="server"><%#: Item.Applicants.Count() %></asp:LinkButton></td>
                 <td>
                     <asp:Button ID="ButtonEdit" runat="server" CommandName="Edit" Text="Edit" CssClass="btn btn-sm btn-primary" /></td>
                 <td>
                     <asp:Button ID="ButtonDelete" runat="server" CommandName="Delete" Text="Delete" CssClass="btn btn-sm btn-primary" /></td>
-
+              
 
             </tr>
         </ItemTemplate>

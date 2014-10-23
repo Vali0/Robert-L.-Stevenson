@@ -3,6 +3,7 @@
     using System;
     using System.Collections.Generic;
     using System.Linq;
+    using System.Runtime.InteropServices;
     using System.Web;
 
     using JobHunters.Data;
@@ -57,6 +58,9 @@
 
         public JobPost Select()
         {
+            var usrManager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(context));
+            var currentUser = usrManager.FindById(HttpContext.Current.User.Identity.GetUserId());
+
             if (this.offerItem == null)
             {
                 this.errContainer.Visible = true;
@@ -69,14 +73,20 @@
                 && !HttpContext.Current.User.IsInRole("Employer"))
             {
                 this.offerItem.Views += 1;
-                var usrManager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(context));
-                this.offerItem.Viewers.Add(usrManager.FindById(HttpContext.Current.User.Identity.GetUserId()));
+                
+                this.offerItem.Viewers.Add(currentUser);
 
                 if (this.offerItem.Author == null)
                 {
                 }
                 data.JobPosts.Update(this.offerItem);
                 data.SaveChanges();
+            }
+            if (!this.offerItem.Applicants.Contains(currentUser) 
+                && !HttpContext.Current.User.IsInRole("Admin")
+                && !HttpContext.Current.User.IsInRole("Employer"))
+            {
+                this.applyBtn.Visible = true;
             }
             return this.offerItem;
         }
