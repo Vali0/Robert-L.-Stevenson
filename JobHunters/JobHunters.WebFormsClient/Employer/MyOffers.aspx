@@ -12,7 +12,8 @@
         DataKeyNames="Id"
         OnSorting="ListViewMyOffers_Sorting"
         AutoGenerateEditButton="true"
-        AutoGenerateColumns="false">
+        AutoGenerateColumns="false"
+        OnSelectedIndexChanged="ListViewMyOffers_OnSelectedIndexChanged">
 
         <LayoutTemplate>
             <table class="table table-bordered table-hover table-responsive table-striped">
@@ -36,7 +37,7 @@
                             <asp:LinkButton runat="server" CommandName="sort" CommandArgument="CreatedOn">Date Created</asp:LinkButton></th>
                         <th>
                             <asp:LinkButton runat="server" CommandName="sort" CommandArgument="Views">View Count</asp:LinkButton></th>
-                         <th>Applicants</th>
+                        <th>Applicants</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -81,12 +82,13 @@
                 <td><%#: Enum.GetName(typeof(WorkEmployment),Item.WorkEmployement) %></td>
                 <td><%#: Item.CreatedOn %></td>
                 <td><%#: Item.Views %></td>
-                <td><asp:LinkButton runat="server"><%#: Item.Applicants.Count() %></asp:LinkButton></td>
+                <td>
+                    <asp:LinkButton runat="server" CommandName="Select"><%#: Item.Applicants.Count() %></asp:LinkButton></td>
                 <td>
                     <asp:Button ID="ButtonEdit" runat="server" CommandName="Edit" Text="Edit" CssClass="btn btn-sm btn-primary" /></td>
                 <td>
                     <asp:Button ID="ButtonDelete" runat="server" CommandName="Delete" Text="Delete" CssClass="btn btn-sm btn-primary" /></td>
-              
+
 
             </tr>
         </ItemTemplate>
@@ -179,5 +181,30 @@
                 </div>
             </div>
         </EditItemTemplate>
+
+
     </asp:ListView>
+
+    <asp:Repeater runat="server" ID="OfferApplicants"
+        ItemType="JobHunters.Models.JobApplication">
+        
+        <ItemTemplate>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="text-info"><%#: Item.Author.UserName %></h3>
+                </div>
+                <div class="panel-body">
+                    <div class="well">
+                         <strong class="block big-text text-center">Comment</strong>
+                    <p class="text-center lead"><%#: Item.Comment.Length>0?Item.Comment:"No comment." %></p>
+                    </div>
+                   <div class="well">
+                    <asp:Button runat="server" ID="DownloadCv" CssClass="btn btn-lg btn-info" Text="Download CV" CommandName="downloadCv" CommandArgument="<%#: Item.CvPath %>" OnCommand="DownloadCv_OnCommand"/>
+                   </div>
+                    
+                </div>
+            </div>
+        </ItemTemplate>
+       
+    </asp:Repeater>
 </asp:Content>

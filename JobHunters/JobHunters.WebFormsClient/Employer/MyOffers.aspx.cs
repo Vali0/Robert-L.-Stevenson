@@ -136,6 +136,13 @@
                 return;
             }
             item.Viewers.Clear();
+            var applicationsToDelete = data.JobApplications.All().Where(x=>x.JobPostId==item.Id);
+
+            foreach (var app in applicationsToDelete)
+            {
+                data.JobApplications.Delete(app);
+            }
+            data.SaveChanges();
             item.Applicants.Clear();
             data.JobPosts.Update(item);
             if (item.Author==null)
@@ -145,6 +152,28 @@
             data.SaveChanges();
             data.JobPosts.Delete(item);
             data.SaveChanges();
+        }
+
+        protected void ListViewMyOffers_OnSelectedIndexChanging(object sender, ListViewSelectEventArgs e)
+        {
+            
+        }
+
+        protected void ListViewMyOffers_OnSelectedIndexChanged(object sender, EventArgs e)
+        {
+            var itemId = (int)this.ListViewMyOffers.SelectedValue;
+            var applications = data.JobPosts.All().First(x => x.Id == itemId).Applicants;
+            this.OfferApplicants.DataSource = applications;
+            this.OfferApplicants.DataBind();
+        }
+
+        protected void DownloadCv_OnCommand(object sender, CommandEventArgs e)
+        {
+            var path = (string)e.CommandArgument;
+            Response.AddHeader("Content-Disposition", "attachment; filename="+path);
+            Response.ContentType = "application/vnd.openxmlformats-officedocument.wordprocessingml.document";
+            Response.WriteFile(Server.MapPath("~/Uploads/cv/"+path));
+            Response.End();
         }
     }
 }

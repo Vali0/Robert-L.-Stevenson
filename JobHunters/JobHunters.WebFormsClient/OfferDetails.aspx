@@ -53,5 +53,5 @@
             
         </ItemTemplate>
     </asp:FormView>
-    <asp:Button runat="server" ID="applyBtn" Text="Apply now!" CssClass="btn btn-lg btn-success btn-block" Visible="False"/>
+    <asp:LinkButton runat="server" ID="applyBtn" Text="Apply now!" CssClass="btn btn-lg btn-success btn-block" Visible="False"></asp:LinkButton>
 </asp:Content>

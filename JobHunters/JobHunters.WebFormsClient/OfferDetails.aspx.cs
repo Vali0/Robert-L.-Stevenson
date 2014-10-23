@@ -86,11 +86,13 @@
                 && !HttpContext.Current.User.IsInRole("Employer"))
             {
                 this.applyBtn.Visible = true;
+                this.applyBtn.PostBackUrl = "/ApplyForJobOffer.aspx/" + offerItem.Id;
             }
             else
             {
                 if (this.offerItem.Applicants.Any(x=>x.AuthorId==currentUserId))
                 {
+                    this.applyBtn.Visible = true;
                     this.applyBtn.CssClass += " disabled";
                     this.applyBtn.Text = "Your application is being considered!";
                 }

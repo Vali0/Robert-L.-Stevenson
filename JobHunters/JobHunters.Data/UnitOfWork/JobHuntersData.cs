@@ -99,6 +99,10 @@
                 {
                     type = typeof(CategoriesRepository);
                 }
+                else if (typeOfModel.IsAssignableFrom(typeof(JobApplication)))
+                {
+                    type = typeof(JobApplicationsRepository);
+                }
 
                 this.repositories.Add(typeOfModel, Activator.CreateInstance(type, this.context));
             }
