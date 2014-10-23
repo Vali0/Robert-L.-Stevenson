@@ -42,7 +42,7 @@ namespace JobHunters.WebFormsClient
                 if (!int.TryParse(index, out indexParsed))
                 {
                     this.errContainer.Visible = true;
-                    this.errContainer.InnerText = "Invalid Item ID !";
+                    this.errContainer.Text += "Invalid Item ID !";
                     return;
                 }
 
@@ -51,7 +51,7 @@ namespace JobHunters.WebFormsClient
                 {
                     this.errContainer.Visible = true;
                     this.itemFound.Visible = false;
-                    this.errContainer.InnerText = "There is no Job Offer with that ID !";
+                    this.errContainer.Text += "There is no Job Offer with that ID !";
                     return;
                 }
                 this.offerItem = item;
@@ -61,7 +61,7 @@ namespace JobHunters.WebFormsClient
             {
                 this.itemFound.Visible = false;
                 this.errContainer.Visible = true;
-                this.errContainer.InnerText = "There is no Job Offer with that ID !";
+                this.errContainer.Text += "There is no Job Offer with that ID !";
             }
         }
 
@@ -78,8 +78,8 @@ namespace JobHunters.WebFormsClient
                     this.Cv.PostedFile.ContentType == "application/msword")
                 {
                     var userName = currentUser.UserName;
-                    var filePath = this.Server.MapPath("~/Uploads/cv/") + userName + "_" + this.Cv.FileName + ".docx";
-                    this.Cv.SaveAs(filePath);
+                    var filePath = userName + "_curriculum"  + ".docx";
+                    this.Cv.SaveAs(Server.MapPath("~/Uploads/cv/"+filePath));
                     var application = new JobApplication()
                     {
                         AuthorId = currentUserId,
@@ -100,14 +100,14 @@ namespace JobHunters.WebFormsClient
                 else
                 {
                     this.errContainer.Visible = true;
-                    this.errContainer.InnerText = "The only allowed file formats are 'doc' and 'docx' !";
+                    this.errContainer.Text += "The only allowed file formats are 'doc' and 'docx' !";
                     return;
                 }
             }
             else
             {
                 this.errContainer.Visible = true;
-                this.errContainer.InnerText = "Uploading your CV is mandatory!";
+                this.errContainer.Text += "Uploading your CV is mandatory!";
                 return;
             }
 

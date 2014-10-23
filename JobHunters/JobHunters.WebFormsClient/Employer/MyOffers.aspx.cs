@@ -153,5 +153,26 @@
             data.JobPosts.Delete(item);
             data.SaveChanges();
         }
+
+        protected void ListViewMyOffers_OnSelectedIndexChanging(object sender, ListViewSelectEventArgs e)
+        {
+            
+        }
+
+        protected void ListViewMyOffers_OnSelectedIndexChanged(object sender, EventArgs e)
+        {
+            var itemId = (int)this.ListViewMyOffers.SelectedValue;
+            var applications = data.JobPosts.All().First(x => x.Id == itemId).Applicants;
+            this.OfferApplicants.DataSource = applications;
+            this.OfferApplicants.DataBind();
+        }
+
+        protected void DownloadCv_OnCommand(object sender, CommandEventArgs e)
+        {
+            var path = (string)e.CommandArgument;
+            Response.AddHeader("Content-Disposition", "attachment; filename="+path);
+            Response.ContentType = "application/vnd.openxmlformats-officedocument.wordprocessingml.document";
+            Response.WriteFile(Server.MapPath("~/Uploads/cv/"+path));
+        }
     }
 }

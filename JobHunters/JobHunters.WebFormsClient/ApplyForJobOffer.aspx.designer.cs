@@ -19,7 +19,7 @@ namespace JobHunters.WebFormsClient {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl errContainer;
+        protected global::System.Web.UI.WebControls.Label errContainer;
         
         /// <summary>
         /// itemFound control.

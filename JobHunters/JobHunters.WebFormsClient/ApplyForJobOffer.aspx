@@ -1,8 +1,10 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ApplyForJobOffer.aspx.cs" Inherits="JobHunters.WebFormsClient.ApplyForJobOffer" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <div class="alert alert-dismissable alert-danger " runat="server" id="errContainer" visible="False"></div>
-
+    <asp:Label CssClass="alert alert-dismissable alert-danger " runat="server" ID="errContainer" visible="False" style="display: block">
+       <button type="button" class="close" data-dismiss="alert" style="color: #333">x</button>
+    </asp:Label>
+     
     <div runat="server" id="itemFound">
         <h1 class="text-center">Apply for Offer -
             <span class="text-info">
