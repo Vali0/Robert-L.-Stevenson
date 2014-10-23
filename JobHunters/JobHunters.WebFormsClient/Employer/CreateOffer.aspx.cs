@@ -4,11 +4,9 @@
     using System.Collections;
     using System.Linq;
     using System.Web;
-
     using JobHunters.Data;
     using JobHunters.Data.UnitOfWork;
     using JobHunters.Models;
-
     using Microsoft.AspNet.Identity;
     using Microsoft.AspNet.Identity.EntityFramework;
 
@@ -63,19 +61,34 @@
             var workEmploymentParsed =
                 (WorkEmployment)Enum.Parse(typeof(WorkEmployment), this.Employment.SelectedItem.Text);
             var usrManager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(context));
+
+            var filename = "";
+            if (this.UploadImage.HasFile)
+            {
+                if (this.UploadImage.PostedFile.ContentType == "image/jpeg" ||
+                    this.UploadImage.PostedFile.ContentType == "image/gif" ||
+                    this.UploadImage.PostedFile.ContentType == "image/png")
+                {
+                    filename = usrManager.FindById(HttpContext.Current.User.Identity.GetUserId()).UserName;
+                    this.UploadImage.SaveAs(this.Server.MapPath("~/Uploads/Images/") + filename);
+                }
+            }
+
             var offer = new JobPost()
-                            {
-                                Author = usrManager.FindById(HttpContext.Current.User.Identity.GetUserId()),
-                                AuthorId = HttpContext.Current.User.Identity.GetUserId(),
-                                CategoryId = data.Categories.All().First(x => x.Id == selectedCategoryId).Id,
-                                CityId = data.Cities.All().First(x => x.Id == selectedCityId).Id,
-                                CreatedOn = DateTime.Now,
-                                Description = this.Description.Text,
-                                HierarchyLevel = hierarchyLevelParsed,
-                                OfferType = offerTypeParsed,
-                                WorkEmployement = workEmploymentParsed,
-                                Title = this.JobTitle.Text
-                            };
+            {
+                Author = usrManager.FindById(HttpContext.Current.User.Identity.GetUserId()),
+                AuthorId = HttpContext.Current.User.Identity.GetUserId(),
+                CategoryId = data.Categories.All().First(x => x.Id == selectedCategoryId).Id,
+                CityId = data.Cities.All().First(x => x.Id == selectedCityId).Id,
+                CreatedOn = DateTime.Now,
+                Description = this.Description.Text,
+                HierarchyLevel = hierarchyLevelParsed,
+                OfferType = offerTypeParsed,
+                WorkEmployement = workEmploymentParsed,
+                Title = this.JobTitle.Text,
+                ProfileImage = filename
+            };
+
             data.JobPosts.Add(offer);
             data.SaveChanges();
             this.Response.Redirect("MyOffers.aspx");
