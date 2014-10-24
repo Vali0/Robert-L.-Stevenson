@@ -172,6 +172,7 @@
     <Content Include="Controls\ErrorSuccessNotifier\Images\success-icon.png" />
     <Content Include="Controls\ErrorSuccessNotifier\Images\warning-icon.png" />
     <Content Include="Controls\ErrorSuccessNotifier\Scripts\ErrorSuccessNotifier.js" />
+    <Content Include="Controls\ErrorSuccessNotifier\Scripts\jquery-1.3.2.js" />
     <Content Include="Controls\ErrorSuccessNotifier\Styles\ErrorSuccessNotifier.css" />
     <Content Include="DetailedSearch.aspx" />
     <Content Include="Employer\CreateOffer.aspx" />
