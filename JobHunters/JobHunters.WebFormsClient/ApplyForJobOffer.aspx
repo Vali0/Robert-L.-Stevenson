@@ -24,7 +24,10 @@
             <div class="form-group">
                 <asp:Label runat="server" AssociatedControlID="Cv" CssClass="col-md-2 control-label">Upload your CV:</asp:Label>
                 <div class="col-md-10">
-                    <asp:FileUpload runat="server" ID="Cv" CssClass="form-control" />
+                    <div class="btn btn-info btn-file">
+                         Choose File <asp:FileUpload runat="server" ID="Cv" CssClass="form-control" />
+                    </div>
+                   
                     <asp:RequiredFieldValidator runat="server" ControlToValidate="Cv"
                     CssClass="text-danger" ErrorMessage="The Cv field is required."></asp:RequiredFieldValidator>
                 </div>
@@ -36,6 +39,20 @@
         </div>
         </div>
     </div>
+    <script>
+        $(document).on('change', '.btn-file :file', function () {
+            var input = $(this),
+                numFiles = input.get(0).files ? input.get(0).files.length : 1,
+                label = input.val().replace(/\\/g, '/').replace(/.*\//, '');
+            input.trigger('fileselect', [numFiles, label]);
+        });
 
+        $(document).ready(function () {
+            $('.btn-file :file').on('fileselect', function (event, numFiles, label) {
+                $('#file-label').remove();
+                $(this).parent().after($('<span class="label label-primary"/>').prop('id','file-label').css({ 'margin-left': '10px', 'padding': '4px' }).html(label));
+            });
+        });
+    </script>
 </asp:Content>
 

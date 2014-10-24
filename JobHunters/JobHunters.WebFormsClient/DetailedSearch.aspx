@@ -1,4 +1,5 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="DetailedSearch.aspx.cs" 
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="DetailedSearch.aspx.cs" 
+
 Inherits="JobHunters.WebFormsClient.DetailedSearch" MasterPageFile="~/Site.Master" EnableEventValidation="false" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
