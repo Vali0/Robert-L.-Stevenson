@@ -13,12 +13,12 @@
             <div class="panel panel-default">
                 <div class="panel-heading clearfix">
                     <h3 class="text-info pull-left"><%#: Item.Title %></h3>
-                    <asp:Image runat="server" CssClass="pull-right" ImageUrl='<%#: "/Uploads/images/" + Item.ProfileImage %>' Height="60px" />
+                    <asp:Image runat="server" ID="JobImage" CssClass="pull-right" ImageUrl='<%#: "/Uploads/images/" + Item.ProfileImage %>' Height="60px" />
                 </div>
                 <div class="panel-body">
                     <div class="well">
                          <strong class="block big-text text-center">Description</strong>
-                    <p class="text-center lead"><%#: Item.Description %></p>
+                    <pre class="h4"><%#: Item.Description %></pre>
                     </div>
                    <div class="well">
                        <strong>Posted on: </strong>

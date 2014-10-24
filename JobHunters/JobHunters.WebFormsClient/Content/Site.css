@@ -1,9 +1,12 @@
-﻿.block {
+.block {
   display: block;
   margin: 7%;
 }
 .block.no-margin {
   margin-bottom: 2%;
+}
+pre {
+  border: none;
 }
 .navbar-nav li {
   margin-right: 10px;

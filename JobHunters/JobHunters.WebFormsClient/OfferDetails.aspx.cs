@@ -52,6 +52,12 @@
                     this.errContainer.InnerText = "There is no Job Offer with that ID !";
                     return;
                 }
+                
+                if (item.ProfileImage == null)
+                {
+                    //this.JobImage.Visible = false;
+                }
+
                 this.offerItem = item;
             }
         }
