@@ -11,8 +11,9 @@
 
         <ItemTemplate>
             <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h3 class="text-info"><%#: Item.Title %></h3>
+                <div class="panel-heading clearfix">
+                    <h3 class="text-info pull-left"><%#: Item.Title %></h3>
+                    <asp:Image runat="server" CssClass="pull-right" ImageUrl='<%#: "/Uploads/images/" + Item.ProfileImage %>' Height="60px" />
                 </div>
                 <div class="panel-body">
                     <div class="well">
