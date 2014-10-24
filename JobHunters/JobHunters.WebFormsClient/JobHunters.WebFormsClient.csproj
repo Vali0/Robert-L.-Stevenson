@@ -166,6 +166,13 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\bootstrap.theme.min.css" />
     <Content Include="Content\Site.css" />
+    <Content Include="Controls\ErrorSuccessNotifier\ErrorSuccessNotifier.ascx" />
+    <Content Include="Controls\ErrorSuccessNotifier\Images\error-icon.png" />
+    <Content Include="Controls\ErrorSuccessNotifier\Images\info-icon.png" />
+    <Content Include="Controls\ErrorSuccessNotifier\Images\success-icon.png" />
+    <Content Include="Controls\ErrorSuccessNotifier\Images\warning-icon.png" />
+    <Content Include="Controls\ErrorSuccessNotifier\Scripts\ErrorSuccessNotifier.js" />
+    <Content Include="Controls\ErrorSuccessNotifier\Styles\ErrorSuccessNotifier.css" />
     <Content Include="DetailedSearch.aspx" />
     <Content Include="Employer\CreateOffer.aspx" />
     <Content Include="Employer\MyOffers.aspx" />
@@ -359,6 +366,13 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Controls\ErrorSuccessNotifier\ErrorSuccessNotifier.ascx.cs">
+      <DependentUpon>ErrorSuccessNotifier.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ErrorSuccessNotifier\ErrorSuccessNotifier.ascx.designer.cs">
+      <DependentUpon>ErrorSuccessNotifier.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

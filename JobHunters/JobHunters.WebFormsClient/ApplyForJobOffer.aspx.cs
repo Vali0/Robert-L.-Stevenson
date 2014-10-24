@@ -7,6 +7,8 @@ using System.Web.UI.WebControls;
 
 namespace JobHunters.WebFormsClient
 {
+    using Error_Handler_Control;
+
     using JobHunters.Data;
     using JobHunters.Data.UnitOfWork;
     using JobHunters.Models;
@@ -41,17 +43,19 @@ namespace JobHunters.WebFormsClient
                 int indexParsed;
                 if (!int.TryParse(index, out indexParsed))
                 {
-                    this.errContainer.Visible = true;
-                    this.errContainer.Text += "Invalid Item ID !";
+                    ErrorSuccessNotifier.AddErrorMessage("Invalid Item ID !");
+                    //this.errContainer.Visible = true;
+                    //this.errContainer.Text += "Invalid Item ID !";
                     return;
                 }
 
                 var item = data.JobPosts.All().FirstOrDefault(x => x.Id == indexParsed);
                 if (item == null)
                 {
-                    this.errContainer.Visible = true;
+                    ErrorSuccessNotifier.AddErrorMessage("There is no Job Offer with that ID !");
+                    //this.errContainer.Visible = true;
                     this.itemFound.Visible = false;
-                    this.errContainer.Text += "There is no Job Offer with that ID !";
+                    //this.errContainer.Text += "There is no Job Offer with that ID !";
                     return;
                 }
                 this.offerItem = item;
@@ -59,9 +63,10 @@ namespace JobHunters.WebFormsClient
             }
             else
             {
+                ErrorSuccessNotifier.AddErrorMessage("There is no Job Offer with that ID !");
                 this.itemFound.Visible = false;
-                this.errContainer.Visible = true;
-                this.errContainer.Text += "There is no Job Offer with that ID !";
+                //this.errContainer.Visible = true;
+                //this.errContainer.Text += "There is no Job Offer with that ID !";
             }
         }
 
