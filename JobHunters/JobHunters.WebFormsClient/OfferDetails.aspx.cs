@@ -6,6 +6,8 @@
     using System.Runtime.InteropServices;
     using System.Web;
 
+    using Error_Handler_Control;
+
     using JobHunters.Data;
     using JobHunters.Data.UnitOfWork;
     using JobHunters.Models;
@@ -40,16 +42,18 @@
                 int indexParsed;
                 if (!int.TryParse(index, out indexParsed))
                 {
-                    this.errContainer.Visible = true;
-                    this.errContainer.InnerText = "Invalid Item ID !";
+                    ErrorSuccessNotifier.AddErrorMessage("Invalid Item ID !");
+                    //this.errContainer.Visible = true;
+                    //this.errContainer.InnerText = "Invalid Item ID !";
                     return;
                 }
 
                 var item = data.JobPosts.All().FirstOrDefault(x => x.Id == indexParsed);
                 if (item == null)
                 {
-                    this.errContainer.Visible = true;
-                    this.errContainer.InnerText = "There is no Job Offer with that ID !";
+                    ErrorSuccessNotifier.AddErrorMessage("There is no Job Offer with that ID !");
+                    //this.errContainer.Visible = true;
+                    //this.errContainer.InnerText = "There is no Job Offer with that ID !";
                     return;
                 }
                 this.offerItem = item;
@@ -64,8 +68,9 @@
 
             if (this.offerItem == null)
             {
-                this.errContainer.Visible = true;
-                this.errContainer.InnerText = "There is no Job Offer with that ID !";
+                ErrorSuccessNotifier.AddErrorMessage("There is no Job Offer with that ID !");
+                //this.errContainer.Visible = true;
+                //this.errContainer.InnerText = "There is no Job Offer with that ID !";
                 return null;
             }
             if (!this.IsPostBack

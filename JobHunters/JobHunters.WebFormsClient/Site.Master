@@ -1,5 +1,8 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="JobHunters.WebFormsClient.SiteMaster" %>
 
+<%@ Register src="~/Controls/ErrorSuccessNotifier/ErrorSuccessNotifier.ascx"
+    tagname="ErrorSuccessNotifier" tagprefix="userControls" %>
+
 <!DOCTYPE html>
 
 <html lang="en">
@@ -11,6 +14,7 @@
     <asp:PlaceHolder runat="server">
         <%: Scripts.Render("~/bundles/modernizr") %>
     </asp:PlaceHolder>
+    <script src="Controls/ErrorSuccessNotifier/Scripts/ErrorSuccessNotifier.js"></script>
     <webopt:BundleReference runat="server" Path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <link href="Content/bootstrap.theme.min.css" rel="stylesheet" />
@@ -87,6 +91,7 @@
             </div>
         </div>
         <div class="container body-content">
+            <userControls:ErrorSuccessNotifier ID="ErrorSuccessNotifier" runat="server" />
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
             <hr />
